@@ -20,3 +20,4 @@ HOMEPAGE TEAM:
 EDITOR TEAM:
 - Montenegro
 - Cominguez
+- Ajero
