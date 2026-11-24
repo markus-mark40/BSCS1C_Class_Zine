@@ -1,1 +1,0 @@
-My webpage is a space futuristic themed site using HTML and CSS where I, a first-year BSCS student, share my hobbies, class schedule, favorite song, goals, and reflections.

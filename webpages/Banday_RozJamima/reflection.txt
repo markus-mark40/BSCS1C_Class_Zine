@@ -1,3 +1,0 @@
-**Reflection**
-
-The easiest part for me was adding my personal information and choosing what I wanted to include on my webpage. The confusing part was using CSS, especially when adjusting the layout, spacing, and colors. I learned that HTML and CSS can be used together to create and design a webpage. One thing I would improve is the design because I want to be more creative by changing some parts of the original template and adding my own ideas. I hope these changes are allowed as long as I follow the instructions and include all the required elements.

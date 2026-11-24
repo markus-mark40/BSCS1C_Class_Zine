@@ -1,3 +1,0 @@
-REFLECTION
-
-While creating my webpage, I used the knowledge I already know from my past years in high school, so it was relatively easy to create one from scratch, but I still searched up tutorials on how to do some parts and make it work. Generally, it was easy for me to understand since there was no JavaScript involved, which I would've implemented in my webpage if it was allowed. I didn't change much from my activity for this project aside from the required features in the criteria since it was already a decent base for me to start on and only improve some stuff. There are still a lot for me to improve on in web dev, but as long as I practice it, I'll be able to master it eventually.
