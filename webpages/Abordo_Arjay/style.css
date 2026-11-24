@@ -1,0 +1,169 @@
+/*
+=====================================================================
+  CS 101 ACTIVITY: BUILD YOUR OWN "ABOUT ME" WEB PAGE
+  File 2 of 2: style.css  (the LOOK and LAYOUT of your page)
+=====================================================================
+   --------------------------------------------------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgb(0, 0, 0);
+  background-color: #16f2e7;
+  background-image: linear-gradient(130deg,rgb(145, 145, 255)0%,rgb(200, 237, 249)80%);
+  background-attachment: fixed;
+}
+
+
+
+h1 {
+  color: #ffdaed;
+  font-size: 3.5rem;
+  text-align: left;
+}
+
+h2,
+h3 {
+  font-size: 2.5rem;
+  color: rgb(58, 51, 82);
+}
+
+header,
+footer {
+  background-image: linear-gradient(135deg, #35574d 30%, #453f7e 100%);
+  color: rgb(255, 255, 255);
+  text-align: left;
+}
+
+.music-player {
+  display: flex;
+  background: linear-gradient(rgb(226, 208, 255),rgb(200, 237, 243));
+  padding: 30px 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+  text-align: center;
+  
+}
+
+.music-player p {
+
+  margin: 0 0 12px 0;
+  font-weight: bold;
+  color: #333333;
+}
+
+audio {
+  width: 500px;
+  outline: none;
+  border-radius: 30px;
+}
+
+section {
+  background-image: linear-gradient(130deg, #a3eeff 20%, #d0ffd7);
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  border-radius: 60px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+/* This consecutive lines having the word 'section' was added for every section to have a button :)*/
+.section-btn {
+  display: flex;
+  padding: 14px 20px;
+  background: #6e69d8;
+  background-color:(#267952);
+  border-radius: 10px;
+  cursor: pointer;
+  list-style: none;
+  text-align: center;
+}
+
+.section-btn::marker {
+  content: "";
+  display: none;
+}
+
+.content {
+  padding: 16px;
+}
+
+header,
+footer {
+  padding: 30px;
+  border-style: dashed;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+nav a {
+  color: rgb(55, 228, 78);
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+table {
+  border-collapse: none;
+  width: 100%;
+}
+
+th,
+td {
+  background-color: rgb(62, 255, 71);
+  border: 2px solid;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #e2c6c6;
+  color: black;
+}
+
+tr:nth-child(even) {
+  background-color: #ff31f2;
+}
+
+
+img {
+  border-radius: 50%;
+  height: auto;
+  max-width: 80%;
+  object-fit: cover;
+}
+
+.about-content {
+  /* I somehow added this line in order for my image to be align with the text*/
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+a {
+  color: rgb(81, 19, 132);
+}
+
+a:hover {
+  color: #c0392b;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+}

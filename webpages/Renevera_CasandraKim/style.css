@@ -1,0 +1,695 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+   background-image: url("images/background.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   backdrop-filter: blur(2vh) contrast(1.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   margin: 0;
+   color: #a4cbe3;
+}
+
+.container {
+   height: 80vh;
+   width: 60vw;
+   padding: 20px;
+}
+
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   height: auto;
+   font-family: "Bruno Ace SC", sans-serif;
+   user-select: none;
+}
+
+.head1 {
+   margin-left:1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   line-height: 1;
+   z-index: 2;
+   margin-bottom: 10px;
+}
+
+.backtext {
+   color: #e2f5f3;
+   font-size: clamp(42px, 5vw, 70px);
+}
+
+.fronttext {
+   color: #4dd4cd;
+   font-size: clamp(14px, 1.5vw, 20px);
+   font-style: italic;
+   font-weight: 400;
+   font-family: "Ubuntu Mono", sans-serif;
+   margin-top: -6px;
+}
+
+
+.head2 {
+   flex: 1 1 0;
+   min-width: 0;
+   width: auto;
+   height: auto;
+   margin-top: 0;
+   padding-top: 0;
+}
+
+nav ul {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: flex-end;
+   list-style-type: none;
+   gap: 0;
+   font-size: clamp(10px, 0.9vw, 13px);
+   margin: 0;
+   padding: 0;
+}
+
+nav li {
+   background: linear-gradient(#c0cfd3, #e2f5f3);
+   clip-path: polygon(15px 0, 100% 0, 100% 100%, 0 100%, 0 15px);
+
+}
+
+nav li a {
+   display: block;
+   padding: 10px clamp(4px, 0.7vw, 10px);
+   font-weight: bold;
+   transition: color 0.2s ease;
+}
+
+a:link,
+a:visited {
+   color: #09bbcb;
+   text-decoration: none;
+
+}
+
+nav li:hover {
+   background: linear-gradient(#4dd4cd, #e0f3ff);
+}
+
+nav li a:hover {
+   color: #333c77;
+}
+
+
+.content-section {
+   display: none; 
+   padding: 20px;
+   border: 2px double #333c77;
+   font-size: clamp(0.875rem, 1.5vw, 1rem);
+   
+
+}
+
+.content-section:target {
+   display: block;
+}
+
+.content-section h2 {
+   margin-top: 0;
+   margin-bottom: 0;
+   font-size: clamp(1rem, 4vw, 2rem);
+}
+
+main {
+   padding:10px;
+   background:#e2f5f3;
+   font-family: "Bruno Ace SC", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+
+#about:target,
+body:not(:has(.content-section:target)) #about {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 0 24px;
+
+}
+
+#about h2 {
+   flex: 0 0 100%;
+   color: #a4cbe3;
+   text-align: left;
+}
+
+#about h2 span {
+   background-color: #001b29;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+#about img {
+   flex: 0 0 200px;
+   margin: 3%;
+   width: 300px;
+   aspect-ratio: 1 / 1; 
+   border-radius: 50%;
+   object-fit: cover; 
+   
+   outline: 3px solid #e2f5f3;
+   filter: drop-shadow(0px 0px 20px #4dd4cd);
+}
+
+.about-text {
+   flex: 1 1 200px;
+   min-width: 0;
+}
+
+.about-text h3,
+.about-text h4,
+.about-text p {
+   margin-top: 0;
+}
+
+.about-text h3 {
+   font-size: clamp(2rem, 5vw, 3rem);
+   text-decoration: underline #333c77 5px;
+   color: #4dd4cd;
+   margin-bottom: 2%;
+}
+
+.about-text h3 span {
+   color: #333c77;
+}
+
+.about-text h4 {
+   padding-left: 2rem;
+   font-size: clamp(0.875rem, 1.5vw, 1rem);
+   color: #333c77;
+   margin-bottom: 3%;
+}
+
+.about-text h4 #s1 {
+   text-decoration: underline #001b29 2px;
+   color: #4dd4cd;
+}
+
+.about-text h4 #s2 {
+   background-color: #4dd4cd;
+   color: #001b29;
+   padding-left: 3px;
+   padding-right: 3px;
+}
+
+.about-text hr {
+   border-top: #333c77 solid 2px;
+   margin-bottom: 3%;
+}
+
+.about-text p {
+   background-color: #001b29;
+   padding: 10px;
+   font-size: 15px;
+   font-family: "Ubuntu Mono", sans-serif;
+}
+
+.contact-links {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 12px;
+}
+
+.contact-links a {
+   color: #4dd4cd;
+   font-size: clamp(1.5rem, 2vw, 2rem);
+   transition: color 0.2s ease;
+   transition: font-size 0.2s ease;
+}
+
+.contact-links a:hover,
+.contact-links a:focus-visible,
+.contact-links a:active {
+   color: #001b29;
+   font-size: clamp(1.5rem, 2.2vw, 2rem);
+}
+
+
+@media (max-width: 560px) {
+   #about:target,
+   body:not(:has(.content-section:target)) #about {
+      flex-direction: column;
+      align-items: stretch;
+   }
+
+   #about h2 {
+      flex-basis: auto;
+   }
+
+   #about img {
+      width: min(100%, 200px);
+      flex-basis: auto;
+      align-self: center;
+   }
+
+   .about-text {
+      width: 100%;
+      flex-basis: auto;
+   }
+}
+
+#hobbies:target {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 0 5rem;
+   justify-content: center;
+
+}
+
+#hobbies h2 {
+   flex: 0 0 100%;
+   color: #a4cbe3;
+   text-align: left;
+}
+
+#hobbies h2 span {
+   background-color: #001b29;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+#hobbies h3 {
+   text-align: center;
+}
+
+#hobbies h3 span{
+   background-color: #4dd4cd;
+   color: #001b29;
+   font-size: clamp(1rem, 3.3vw, 1.667rem);
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+#hobbylist {
+   flex: 0 0 200px;
+   margin-top: 2rem;
+}
+
+#hobbylist ul,
+#goallist ol,
+#favlist ol {
+   font-size: clamp(0.875rem, 2vw, 1.25rem);
+   list-style: none;
+   color: #333c77;
+}
+
+#hobbylist li::marker,
+#goallist li::marker,
+#games li::marker,
+#shows li::marker,
+#music li::marker,
+#collecting li::marker {
+   content: "✦ "; 
+   color: #4dd4cd; 
+   font-size: 1.2rem; 
+}
+
+#games a, #shows li, #music a, #collecting li {
+   color: #333c77;
+}
+
+#games a:hover, #music a:hover {
+   font-weight: bold;
+}
+
+#hobbies hr {
+   border-top: #333c77 solid 2px;
+   margin-bottom: 3%;
+   width: 15rem;
+}
+
+
+
+#schedule:target {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 0 5rem;
+   justify-content: center;
+
+}
+
+#schedule h2 {
+   flex: 0 0 100%;
+   color: #a4cbe3;
+   text-align: left;
+   margin-bottom: 3%;
+}
+
+#schedule h2 span {
+   background-color: #001b29;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+
+
+#favorites:target {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 0 5rem;
+   justify-content: center;
+
+}
+
+#favorites h2 {
+   flex: 0 0 100%;
+   color: #a4cbe3;
+   text-align: left;
+   margin-bottom: 3%;
+}
+
+#favorites h2 span {
+   background-color: #001b29;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+#favorites h3 span{
+   background-color: #4dd4cd;
+   color: #001b29;
+   font-size: clamp(1rem, 3.3vw, 1.667rem);
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+#favorites hr {
+   border-top: #333c77 solid 2px;
+   margin-top: 3%;
+   margin-bottom: 3%;
+   width: 90%;
+}
+
+#reflection:target {
+   display: block;
+}
+
+#computing:target {
+   display: block;
+}
+
+#computing h2 {
+   color: #a4cbe3;
+   text-align: left;
+   margin-bottom: 1.5rem;
+}
+
+#computing h2 span {
+   background-color: #001b29;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+#computing hr {
+   border-top: #333c77 solid 2px;
+   margin-top: 3%;
+   margin-bottom: auto;
+   width: 100%;
+}
+
+#computing p {
+   background-color: #001b29;
+   padding: 10px;
+   font-size: 20px;
+   font-family: "Ubuntu Mono", sans-serif;
+}
+#reflection h2 {
+   color: #a4cbe3;
+   text-align: left;
+   margin-bottom: 1.5rem;
+}
+
+#reflection h2 span {
+   background-color: #001b29;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+.reflection-block {
+   margin-bottom: 1.5rem;
+}
+
+#reflection h3 {
+   margin-bottom: 0.75rem;
+}
+
+#reflection hr {
+   border-top: #333c77 solid 2px;
+   margin-top: 3%;
+   margin-bottom: auto;
+   width: 100%;
+}
+
+#reflection h3 span {
+   background-color: #4dd4cd;
+   color: #001b29;
+   font-size: clamp(1rem, 3vw, 1.5rem);
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+#reflection p {
+   background-color: #001b29;
+   padding: 10px;
+   font-size: 20px;
+   font-family: "Ubuntu Mono", sans-serif;
+}
+
+#schedule table {
+   display: block;
+   width: fit-content;
+   max-width: 100%;
+   margin: 0 auto;
+   border-collapse: collapse;
+   overflow-x: auto;
+   white-space: nowrap;
+   background-color: #e2f5f3;
+   color: #001b29;
+}
+
+#schedule th,
+#schedule td {
+   padding: 12px 16px;
+   border: 1px solid #333c77;
+   text-align: left;
+}
+
+#schedule th {
+   background: linear-gradient(#a4cbe3, #e2f5f3);
+   color: #333c77;
+}
+
+#schedule tbody tr:nth-child(even) {
+   background-color: #a4cbe3;
+}
+
+#schedule tbody tr {
+   transition: background-color 0.2s ease;
+}
+
+#schedule tbody tr:hover {
+   background-color: #4dd4cd;
+}
+
+
+footer {
+   background:linear-gradient(#e2f5f3, #c0cfd3);
+   text-align: center;
+   color: #333c77;
+   padding: 1px;
+   font-size: 15px;
+   font-family: "Bruno Ace SC", sans-serif;
+   user-select: none;
+}
+
+footer a {
+   display: inline-block;
+   background-color: #001b29;
+   border-radius: 4px;
+   padding: 2px 4px;
+   font-weight: bold;
+   transition: color 0.2s ease, background-color 0.2s ease;
+   margin-bottom: 1rem;
+}
+
+footer a:hover {
+   background-color: #4dd4cd;
+   color: #001b29;
+}
+
+@media (max-width: 600px) {
+   body {
+      align-items: flex-start;
+      min-height: 100vh;
+   }
+
+   .container {
+      box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      min-height: 100vh;
+      padding: 12px;
+   }
+
+   header {
+      height: auto;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 0;
+   }
+
+   .head1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      margin-left: 0;
+      flex: 0 0 auto;
+      line-height: 1;
+   }
+
+   .backtext {
+      font-size: clamp(30px, 9vw, 48px);
+   }
+
+   .fronttext {
+      font-size: clamp(12px, 3.5vw, 16px);
+   }
+
+   .head2 {
+      box-sizing: border-box;
+      flex: 1 1 auto;
+      min-width: 0;
+      width: auto;
+      height: auto;
+      margin-top: 0;
+      padding-top: 0;
+   }
+
+   nav ul {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 4px;
+      font-size: clamp(10px, 3vw, 13px);
+   }
+
+   nav li a {
+      padding: 8px 9px;
+   }
+
+   main {
+      box-sizing: border-box;
+      padding: 8px;
+   }
+
+   .content-section {
+      box-sizing: border-box;
+      padding: 12px;
+   }
+
+   .content-section h2 {
+      overflow-wrap: anywhere;
+   }
+
+   #about:target,
+   body:not(:has(.content-section:target)) #about {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+   }
+
+   #about h2 {
+      flex-basis: auto;
+   }
+
+   #about img {
+      width: min(100%, 200px);
+      flex-basis: auto;
+      margin: 12px auto;
+   }
+
+   .about-text {
+      width: 100%;
+      flex-basis: auto;
+   }
+
+   #hobbies:target {
+      gap: 16px;
+   }
+
+   #hobbylist,
+   #goallist {
+      flex: 1 1 180px;
+   }
+
+   #hobbies ul,
+   #hobbies ol,
+   #favlist ol {
+      padding-left: 0;
+   }
+
+   #schedule:target,
+   #favorites:target {
+      display: block;
+   }
+
+   #schedule table {
+      box-sizing: border-box;
+      display: table;
+      width: 100%;
+      max-width: 100%;
+      table-layout: fixed;
+      overflow-wrap: anywhere;
+      white-space: normal;
+   }
+
+   #schedule th:nth-child(1),
+   #schedule td:nth-child(1) {
+      width: 45%;
+   }
+
+   #schedule th:nth-child(2),
+   #schedule td:nth-child(2) {
+      width: 15%;
+   }
+
+   #schedule th:nth-child(3),
+   #schedule td:nth-child(3) {
+      width: 40%;
+   }
+
+   #schedule th,
+   #schedule td {
+      padding: 8px;
+      font-size: clamp(0.75rem, 3vw, 0.9rem);
+   }
+
+   #favorites p {
+      box-sizing: border-box;
+      max-width: 100%;
+      padding: 12px;
+      overflow-wrap: anywhere;
+   }
+
+   footer {
+      font-size: 0.8rem;
+   }
+
+}

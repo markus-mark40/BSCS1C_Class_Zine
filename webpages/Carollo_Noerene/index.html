@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[nors] — profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="home-link" href="../../index.html">Back to Home</a>
+    <h1>Noerene</h1>
+    <p>"Fragment of mosaic meant to be known"</p>
+    <nav>
+      <ul>
+        <li><a href="#hello">Hello</a></li>
+        <li><a href="#path">My Path</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#playing">Now Playing</a></li>
+        <li><a href="#favorites">Favorites</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="hello">
+      <h2>get to know, Noerene</h2>
+      <p class="intro">Welcome to my corner, where each piece of me adds to the picture.</p>
+      <div class="about-flex"></div>
+      <figure>
+        <img src="images/noerene.png" alt="Noerene posing for the camera in Sawangan, Legazpi City." width="200">
+        <figcaption>Photo credit: taken by wayne.</figcaption>        
+      </figure>
+      <div>
+        <p>Hello there! I am <strong><i>Noerene Carollo</i></strong>, a 1st year BSCS student at Bicol University. Outside academics, I find peace in sleeping especially during a rainy day. When awake, you can find me leisurely wasting time on the internet watching videos, reading manga/manhwa/manhua, or playing online games. I also like to repeatedly listen to the songs over and over again until I get tired of them. 
+        </p>
+      </div>
+
+      <!-- COMMENT 1: The <img> tag above allows to show my linked photo. -->
+    </section>
+
+    <section id="path">
+      <h2>My Path into Computing</h2>
+      <p> My curiosity and drive to know how various things work was what pushed me to pursue Computer Science. I like knowing what happens behind a screen: how an app opens, how a game connects players, how a page is built. Aside from that, due to my indecisiveness and the struggle of finding what I am really passionate about back then, I decided to chose practicality given the circumstances. Which is what brought me to create this webpage.</p>
+    </section>    
+
+    <section id="hobbies">
+      <h2>Noerene's little corner</h2>
+ <div class="cards">
+        <article>
+          <h3>Reading</h3>
+          <!-- Bookshelf: CSS-drawn spines. To use real covers, add an <img> with alt text, a caption, and permission/credit. -->
+          <div class="shelf" aria-hidden="true">
+            <span class="spine s1">Omniscient Reader's Viewpoint</span>
+            <span class="spine s2">19 Days</span>
+            <span class="spine s3">Lost in the Cloud</span>
+          </div>
+          <ul>
+            <li>Omniscient Reader's Viewpoint</li>
+            <li>19 Days</li>
+            <li>Lost in the Cloud</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Listening to Music</h3>
+          <ul>
+            <li>Arctic Monkeys</li>
+            <li>Conan Gray</li>
+            <li>NIKI</li>
+            <li>Mitski</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Online Games</h3>
+          <ul>
+            <li>Call of Duty: Mobile</li>
+            <li>Valorant</li>
+            <li>Sudoku</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="playing">
+  <h2>Now Playing</h2>
+  <div class="player">
+    <div class="vinyl" role="img" aria-label="A spinning vinyl record labeled 505"></div>
+    <div>
+      <p class="now">505</p>
+      <p class="by">Arctic Monkeys</p>
+      <audio controls preload="none">
+        <source src="audio/505.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+          </audio>
+          <p class="small"><a href="https://open.spotify.com/track/58ge6dfP91o9oXMzq3XkIS" target="_blank" rel="noopener">Listen to the full song on Spotify</a>. Hover over the record to pause it.</p>
+          <ul class="tracks">
+            <li><span class="song">505</span><span class="artist">Arctic Monkeys</span></li>
+            <li><span class="song">Alley Rose</span><span class="artist">Conan Gray</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+   <section id="favorites">
+      <h2>My Favorites</h2>
+      <div class="movies">
+        <h3>Favorite Movies</h3>
+        <div class="cards">
+          <article class="poster p1">
+            <h4>Interstellar</h4>
+            <p>Directed by Christopher Nolan.</p>
+            <figure class="clip">
+              <video controls preload="none" playsinline>
+                <source src="videos/interstellar.mp4" type="video/mp4">
+                Your browser does not support the video element.
+              </video>
+              <figcaption>Short clip. Video credit: @sd_kfd on tiktok</figcaption>
+            </figure>
+            <a href="https://www.youtube.com/results?search_query=Interstellar+official+trailer" target="_blank" rel="noopener">Watch the trailer</a>
+          </article>
+          <article class="poster p2">
+            <h4>Project Hail Mary</h4>
+            <p>Based on the novel by Andy Weir.</p>
+            <figure class="clip">
+              <video controls preload="none" playsinline>
+                <source src="videos/project-hail-mary.mp4" type="video/mp4">
+                Your browser does not support the video element.
+              </video>
+              <figcaption>Short clip. Video credit: @createdbysteven on tiktok</figcaption>
+            </figure>
+            <a href="https://www.youtube.com/results?search_query=Project+Hail+Mary+official+trailer" target="_blank" rel="noopener">Watch the trailer</a>
+          </article>
+          <article class="poster p3">
+            <h4>Tangled</h4>
+            <p>Disney animated film, 2010.</p>
+            <!-- The <video> element plays a short clip from my videos folder. controls shows play/pause; preload="none" waits for a click. -->
+            <figure class="clip">
+              <video controls preload="none" playsinline>
+                <source src="videos/tangled.mp4" type="video/mp4">
+                Your browser does not support the video element.
+              </video>
+              <figcaption>Short clip. Video credit: @made.by.solar on tiktok</figcaption>
+            </figure>
+            <a href="https://www.youtube.com/results?search_query=Tangled+official+trailer" target="_blank" rel="noopener">Watch the trailer</a>
+          </article>
+        </div>
+      </div>
+      <h3>Favorite Apps</h3>
+      <ul class="apps">
+        <li>Spotify</li>
+        <li>TikTok</li>
+        <li>Sudoku</li>
+      </ul>
+      <p>
+        A website I enjoy visiting is
+        <!-- COMMENT 3: href allows to hold link or web address to where it goes to. -->
+        <a href="https://mangadex.org/" target="_blank" rel="noopener">MangaDex</a>
+        because it allows me to read comics and manga online without a payment.
+      </p>
+    </section>
+
+    <section id="schedule">
+      <h2>My Class Schedule</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Subject</th><th>Day</th><th>Time</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>CS 102: Computer Programming 1</td><td>Monday, Wednesday</td><td>4:00 PM - 7:00 PM</td></tr>
+            <tr><td>Phys 1: Physics for Computing</td><td>Tuesday, Thursday</td><td>1:00 PM - 2:30 PM</td></tr>
+            <tr><td>Math 101: Mathematical Analysis</td><td>Tuesday, Thursday</td><td>2:30 PM - 4:00 PM</td></tr>
+            <tr><td>CS 101: Introduction to Computing</td><td>Wednesday</td><td>9:00 AM - 12:00 PM</td></tr>
+            <tr><td>GEC11: Understanding the Self</td><td>Friday</td><td>9:00 AM - 12:00 PM</td></tr>
+            <tr><td>Math 101: Mathematical Analysis</td><td>Friday</td><td>1:00 PM - 3:00 PM</td></tr>
+            <tr><td>NSTP 11: Civic Welfare Training Service</td><td>Saturday</td><td>7:30 AM - 10:30 AM</td></tr>
+            <tr><td>PATHFit 1: Movement Competency Training</td><td>Saturday</td><td>4:00 PM - 6:00 PM</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+      <!-- COMMENT 2: <tr> is to create one table row. <th> for the header cells in the table. <td> is the cells below the header cells that holds the information. -->
+    <section id="goals">
+      <h2>My Top 3 Goals</h2>
+      <ol>
+        <li>Achieve financial stability by building a successful career in technology.</li>
+        <li>Keep growing my skills in programming, systems, and problem-solving.</li>
+        <li>Create technology that is accessible, inclusive, and genuinely useful.</li>
+      </ol>
+    </section>
+
+    <section id="reflection">
+      <h2>Reflection</h2>
+      <p>Making this page taught me that web design is mostly about small decisions that add up: a color palette, two fonts, and consistent spacing can change how a page feels. I learned how semantic tags give a page structure, how Flexbox and Grid arrange content, and how CSS variables let me change a whole theme from one place.</p>
+      <p>Compared with my About Me activity, I added new sections, a color palette, a skyline background, a bookshelf, a spinning vinyl, hover effects, a dark mode, and a layout that works on a phone.</p>
+    </section>
+
+    <section id="sources">
+      <h2>Credits and Sources</h2>
+      <ul>
+        <li>NYC skyline background photo: <a href="https://wallpapers.com" target="_blank" rel="noopener noreferrer">New York HD Skyline At Night</a> by carmen at Wallpapers.com.</li>
+        <li>Profile photo: taken by wayne.</li>
+        <li>Vinyl record and bookshelf: drawn by me with CSS.</li>
+        <li>Movie clips: short excerpts from Interstellar, Project Hail Mary, and Tangled, shown for a class project (Video credits: @sd_kfd for interstellar, @createdbysteven for project hail mary, and @made.by.solar for tangled).</li>
+        <li>Trailer links go to YouTube search results for the official trailers.</li>
+        <li>505 audio: Arctic Monkeys, from the album Favorite Worst Nightmare (2007), used as a short clip for this class project.</li>
+      </ul>
+    </section>  
+
+  </main>
+
+  <footer>
+    <p>Made by Noerene for CS 101 | Bicol University, 2026.</p>
+    <p><a href="../../index.html">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>

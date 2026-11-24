@@ -1,0 +1,360 @@
+
+/* ---------- GLOBAL ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: black; }
+img, video { max-width: 100%; }
+
+/* ---------- NAV (one shared bar) ---------- */
+.site-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 6px 16px;
+    padding: 8px 10px;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(4px);
+}
+.site-nav a {
+    color: white;
+    font-family: sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+    padding: 3px 2px;
+}
+.site-nav a:hover { text-decoration: underline; }
+
+/* ---------- PROFILE ---------- */
+.profile { background: black; color: white; }
+.profile .banner { position: relative; }
+.profile .banner-video {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    pointer-events: none;
+}
+.profile .gradient-box {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, black 100%);
+}
+.profile .bottom-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 20px 20px 0;
+}
+.profile .picture-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1 1 560px;
+    min-width: 0;
+}
+.profile .profile-pic {
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(20, 20, 20, 0.9);
+}
+.profile .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 260px;
+    max-width: 420px;
+    min-width: 0;
+}
+.profile .name {
+    color: white;
+    background: black;
+    border-radius: 15px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0;
+    padding: 5px;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: clamp(22px, 6.5vw, 40px);
+}
+.profile .tagline {
+    color: black;
+    background: #E7C99A;
+    align-self: stretch;
+    text-align: center;
+    margin: 4px 0 0;
+    padding: 10px;
+}
+.profile .intro {
+    color: white;
+    background: #4B0D11;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 10px 0 0;
+    padding: 7px;
+}
+.profile .schedule-link {
+    display: block;
+    flex: 1 1 340px;
+    max-width: 520px;
+    min-width: 0;
+    text-decoration: none;
+    color: inherit;
+}
+.profile .schedule {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 2px;
+    font-family: sans-serif;
+    padding: 10px;
+    background: #1f1f1f;
+    border-radius: 10px;
+}
+.csched { color: #E7C99A; background: #0f0f0f; }
+.profile .schedule th {
+    background: #0f0f0f;
+    color: #E7C99A;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.profile .schedule td {
+    background: #0f0f0f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgb(77, 77, 77);
+    font-weight: bold;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+.profile .socials {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 30px;
+}
+.profile .socials a { color: white; text-decoration: none; }
+.profile .socials i { font-size: 30px; }
+
+/* ---------- ABOUT ---------- */
+.about { background: #F3E8D2; padding: 70px 0 50px; }
+.about hr { border: 1px solid #29211E; }
+.about .about-rule { width: 80%; margin: 20px auto; }
+.about .divider { width: 100%; margin: 20px 0; }
+.about .title-box {
+    color: #29211E;
+    font-family: "Playfair Display SC", serif;
+    font-weight: 700;
+    text-align: center;
+}
+.about .about-me { margin: 0; font-size: clamp(22px, 6vw, 32px); }
+.about .two-column-layout { display: flex; gap: 40px; width: 100%; }
+.about .left-column { display: flex; flex-direction: column; flex: 1 1 0; min-width: 0; }
+.about .right-column { flex: 1 1 0; min-width: 0; margin-right: 20px; }
+.about .paragraph-box,
+.about .tagline-box { margin-left: 20px; max-width: 600px; }
+.about .tag-line {
+    background: #7A2028;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    font-family: "Playfair Display SC", serif;
+    font-weight: 400;
+}
+.about .yap { font-family: "DM Sans", sans-serif; padding: 0; margin-left: 10px; margin-right: 10px; }
+.about .reflect {
+    margin: 10px 20px 20px 20px;
+    max-width: 600px;
+    border: 1px solid rgb(150, 126, 73);
+    border-radius: 10px;
+    background: #d8c8af;
+}
+.about ul { font-family: "DM Sans", sans-serif; font-size: 15px; }
+.about .goals-box { margin: 20px 20px 0 20px; }
+.about .tittwo {
+    color: #29211E;
+    margin: 0 8px 0 0;
+    border: 1px solid #B58B52;
+    background: #DCCBB0;
+    padding: 5px;
+}
+.about .side-vid {
+    display: block;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    object-position: 0% 35%;
+    pointer-events: none;
+}
+.about .header1 {
+    color: #29211E;
+    margin-top: 10px;
+    border: 1px solid #B58B52;
+    background: #DCCBB0;
+    padding: 5px;
+}
+.about .finalyap {
+    margin: 30px 0 0;
+    border: 1px solid rgb(150, 126, 73);
+    border-radius: 10px;
+    background: #d8c8af;
+    padding: 10px;
+}
+
+/* ---------- HOBBIES ---------- */
+.hobbies { background: #F1E6D0; color: #29251F; padding: 70px 0 40px; }
+.hobbies .hobbies-container { max-width: 800px; margin: 0 auto; padding: 0 30px; }
+.hobbies .pixel-title {
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(16px, 5vw, 26px);
+    margin: 0 0 50px;
+    line-height: 1.4;
+}
+.hobbies .section-title {
+    font-family: "Playfair Display SC", serif;
+    font-size: clamp(22px, 6vw, 32px);
+    font-weight: 700;
+    margin: 40px 0 15px;
+}
+.hobbies ul, .hobbies ol {
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    padding-left: 40px;
+}
+
+/* ---------- SCHEDULE ---------- */
+.schedule-section { background: rgb(3, 0, 42); color: black; padding: 70px 0 50px; }
+.schedule-section .page-title {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-family: "Press Start 2P", system-ui;
+    font-size: clamp(20px, 7vw, 32px);
+}
+.schedule-section .full-sched { margin-top: 30px; }
+.schedule-section .schedule-table {
+    width: 96%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background: #F1E6D0;
+    color: #29251F;
+    border: 1px solid #88785F;
+}
+.schedule-section .schedule-table th {
+    font-family: "Playfair Display SC", serif;
+    font-size: clamp(11px, 1.5vw, 16px);
+    background: #C4AD87;
+    color: #29251F;
+    border: 1px solid #88785F;
+    padding: 1px;
+    text-align: center;
+    font-weight: 700;
+}
+.schedule-section .schedule-table td {
+    background: #F1E6D0;
+    color: #29251F;
+    border: 1px solid #29211E;
+    padding: 10px;
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    overflow-wrap: anywhere;
+}
+.schedule-section .time-col { font-weight: bold; }
+
+/* day cards (shown on phones instead of the table) */
+.schedule-section .day-cards { display: none; }
+.schedule-section .day-card {
+    width: 92%;
+    margin: 0 auto 14px;
+    background: #F1E6D0;
+    border: 1px solid #88785F;
+    color: #29251F;
+    font-family: "DM Sans", sans-serif;
+}
+.schedule-section .day-card h3 {
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+    background: #C4AD87;
+    font-family: "Playfair Display SC", serif;
+    font-size: 16px;
+}
+.schedule-section .class-item {
+    padding: 10px 12px;
+    border-top: 1px solid #29211E;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+.schedule-section .class-item small { font-size: 12px; }
+.schedule-section .class-time { display: block; font-weight: bold; font-size: 12px; margin-bottom: 2px; }
+
+/* ---------- FAVORITES ---------- */
+.favorites { background: #0a0a0a; color: #F1E6D0; padding: 70px 0 60px; }
+.favorites .favorites-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 30px;
+    font-family: "DM Sans", sans-serif;
+}
+.favorites .fav-title {
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(16px, 5vw, 28px);
+    margin: 0 0 50px;
+    line-height: 1.4;
+    color: #F1E6D0;
+}
+.favorites .fav-text { font-size: 20px; line-height: 1.8; margin: 0 0 60px; }
+.favorites .fav-link { color: #C4AD87; font-weight: bold; }
+.favorites .fav-link:hover { color: #F1E6D0; }
+.favorites .fav-footer {
+    font-size: 16px;
+    font-family: "Playfair Display SC", serif;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin: 0;
+}
+
+/* ---------- TABLET ---------- */
+@media (max-width: 900px) {
+    .about .two-column-layout { flex-direction: column; gap: 20px; }
+    .about .right-column { margin: 0 20px; }
+    .schedule-section .schedule-table td { padding: 6px 3px; }
+}
+
+/* ---------- PHONE ---------- */
+@media (max-width: 700px) {
+    .schedule-section .schedule-table { display: none; }
+    .schedule-section .day-cards { display: block; }
+}
+
+@media (max-width: 600px) {
+    .profile .picture-box { flex-direction: column; align-items: center; flex-basis: 100%; }
+    .profile .text-box { max-width: none; width: 100%; flex-basis: auto; }
+    .favorites .fav-text { font-size: 17px; }
+    .hobbies ul, .hobbies ol { font-size: 16px; padding-left: 28px; }
+    .about .tag-line { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+    .profile .schedule { padding: 6px; }
+    .profile .schedule th,
+    .profile .schedule td { padding: 6px 2px; font-size: 9px; }
+}

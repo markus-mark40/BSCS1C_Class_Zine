@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Grande | About Me</title>
+  <!-- Link to my external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Spider that crawls across the page (decorative, so hidden from screen readers) -->
+  <svg class="spider" viewBox="0 0 100 100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <!-- Legs: group A and B move in turns, like a real walking spider -->
+    <g class="legs legs-a" fill="none" stroke="#d2a8ff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M44 38L26 22L14 14"/>
+      <path d="M57 44L78 38L92 38"/>
+      <path d="M43 52L22 56L8 64"/>
+      <path d="M55 60L74 76L84 90"/>
+    </g>
+    <g class="legs legs-b" fill="none" stroke="#d2a8ff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M56 38L74 22L86 14"/>
+      <path d="M43 44L22 38L8 38"/>
+      <path d="M57 52L78 56L92 64"/>
+      <path d="M45 60L26 76L16 90"/>
+    </g>
+    <!-- Body -->
+    <ellipse cx="50" cy="60" rx="14" ry="18" fill="#6e40c9" stroke="#d2a8ff" stroke-width="3"/>
+    <circle cx="50" cy="36" r="10" fill="#8957e5" stroke="#d2a8ff" stroke-width="3"/>
+    <!-- Eyes -->
+    <circle cx="46" cy="33" r="3" fill="#fff"/><circle cx="54" cy="33" r="3" fill="#fff"/>
+    <circle cx="46" cy="32" r="1.4" fill="#0d1117"/><circle cx="54" cy="32" r="1.4" fill="#0d1117"/>
+    <!-- Abdomen mark -->
+    <path d="M50 52L45 62L50 70L55 62Z" fill="#d2a8ff"/>
+  </svg>
+
+  <!-- Spider webs: one drawing (symbol) reused in all four corners -->
+  <svg class="web-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="web-corner" viewBox="0 0 100 100">
+      <g fill="none" stroke="#c9d1d9" stroke-width="1.2" stroke-linecap="round">
+        <!-- Straight threads going out from the corner -->
+        <path d="M0 0L98.0 0.0 M0 0L90.5 37.5 M0 0L69.3 69.3 M0 0L37.5 90.5 M0 0L0.0 98.0"/>
+        <!-- Curved threads connecting them -->
+        <path d="M22.0 0.0Q18.6 3.7 20.3 8.4Q15.7 10.5 15.6 15.6Q10.5 15.7 8.4 20.3Q3.7 18.6 0.0 22.0 M42.0 0.0Q35.4 7.0 38.8 16.1Q30.0 20.1 29.7 29.7Q20.1 30.0 16.1 38.8Q7.0 35.4 0.0 42.0 M62.0 0.0Q52.3 10.4 57.3 23.7Q44.3 29.6 43.8 43.8Q29.6 44.3 23.7 57.3Q10.4 52.3 0.0 62.0 M82.0 0.0Q69.2 13.8 75.8 31.4Q58.6 39.2 58.0 58.0Q39.2 58.6 31.4 75.8Q13.8 69.2 0.0 82.0"/>
+      </g>
+    </symbol>
+  </svg>
+  <svg class="web web-tl" viewBox="0 0 100 100" aria-hidden="true"><use href="#web-corner"/></svg>
+  <svg class="web web-tr" viewBox="0 0 100 100" aria-hidden="true"><use href="#web-corner"/></svg>
+  <svg class="web web-bl" viewBox="0 0 100 100" aria-hidden="true"><use href="#web-corner"/></svg>
+  <svg class="web web-br" viewBox="0 0 100 100" aria-hidden="true"><use href="#web-corner"/></svg>
+
+  <!-- ========== HEADER: title, intro, and navigation ========== -->
+  <header class="site-header">
+    <img class="header-sticker" src="images/bug.svg" alt="">
+    <h1>Hello, This is Yhann!</h1>
+    <!-- Intro: two sentences (the assignment allows one or two) -->
+    <p class="intro">I’m John Ryan M. Grande, a CS student who loves code, games, and watching videos. Welcome to my page, KLASMEYTS!</p>
+
+    <nav>
+      <ul class="nav-list">
+        <!-- In-page links that jump to each section -->
+        <li><a href="#hello">Hello</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#path">My path</a></li>
+        <li><a href="#favorites">Favorites</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+        <li><a href="#stickers">Stickers</a></li>
+        <!-- Back to Home link -->
+        <li><a class="home-link" href="../../index.html">Back to Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== SECTION 1: HELLO ========== -->
+    <section id="hello" class="card hello">
+      <img class="deco" src="images/shuttlecock.svg" alt="">
+      <!-- figure + figcaption = image with caption -->
+      <figure>
+        <img src="images/profile.png" alt="Photo of John Ryan Grande in his graduation outfit">
+        <figcaption>Frustration turned into graduation. I finally made it! Image credit: Photo taken by the studio.</figcaption>
+      </figure>
+      <div>
+        <h2>Hello Guys</h2>
+        <p>
+          Hi, I'm <strong>Bugs</strong>, a <strong>1st year</strong>
+          <strong>BS Computer Science</strong> student
+          who treats every error as a puzzle waiting to be solved and loves coding even when the errors make me want to pull my hair out. :&lt;
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 2: ABOUT ME ========== -->
+    <section id="about" class="card">
+      <img class="deco" src="images/basketball.svg" alt="">
+      <h2>About me</h2>
+      <p>I love playing basketball and badminton, and when I’m not on the court you’ll find me gaming or watching videos. Coding is my kind of challenge. Debugging can be frustrating, but nothing beats the feeling of finally fixing an error.</p>
+      <!-- A LISTS -->
+      <h3>Things I enjoy</h3>
+      <ul>
+        <li>Playing basketball</li>
+        <li>Playing badminton</li>
+        <li>Playing online/offline games</li>
+      </ul>
+    </section>
+
+    <!-- ========== SECTION 3: MY PATH INTO COMPUTING ========== -->
+    <section id="path" class="card">
+      <img class="deco" src="images/terminal.svg" alt="">
+      <h2>My path into computing</h2>
+      <p>I chose Computer Science because I love technology and the world of cybersecurity. In my free time, I enjoy playing video games and watching videos, which made me curious about how software works and what the cybersecurity fundamentals are. Now, I love coding because it feels like solving a big puzzle. Even when I get hard errors that make me frustrated, I feel so happy and proud when I finally fix them.</p>
+      <!-- blockquote -->
+      <blockquote>Every error is just a puzzle waiting to be solved.</blockquote>
+    </section>
+
+    <!-- ========== SECTION 4: FAVORITES OR SKILLS (TABLE) ========== -->
+    <section id="favorites" class="card">
+      <img class="deco" src="images/controller.svg" alt="">
+      <h2>Favorites or skills</h2>
+      <!-- A TABLE. The wrapper lets it scroll inside itself -->
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>My pick</th>
+              <th>Why I like it</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Category"><div class="cat"><img class="app-icon" src="images/community.svg" alt=""> <span>Discord</span></div></td>
+              <td data-label="My pick">SAMP community</td>
+              <td data-label="Why I like it">That is where I met a lot of people in a game called SAMP, where I enjoyed roleplaying and face-to-face combat shooting.</td>
+            </tr>
+            <tr>
+              <td data-label="Category"><div class="cat"><img class="app-icon" src="images/video.svg" alt=""> <span>TikTok</span></div></td>
+              <td data-label="My pick">Interacting and entertainment</td>
+              <td data-label="Why I like it">If I get bored, I watch TikTok videos or go live to talk to people and improve my communication skills.</td>
+            </tr>
+            <tr>
+              <td data-label="Category"><div class="cat"><img class="app-icon" src="images/sword.svg" alt=""> <span>Mobile Legends Bang Bang</span></div></td>
+              <td data-label="My pick">My old comfort zone</td>
+              <td data-label="Why I like it">Day and night are completely different there, because me and my troops play all day just to win ranked games. Sometimes when our egos get high, we play friendly 1v1 or 5v5 just to prove who is stronger and who carries all the games.</td>
+            </tr>
+            <tr>
+              <td data-label="Category"><div class="cat"><img class="app-icon" src="images/brain.svg" alt="Brain icon for critical thinking" title="Critical Thinking">
+                <img class="app-icon" src="images/compass.svg" alt="Compass icon for decision making" title="Decision Making">
+                <img class="app-icon" src="images/clock.svg" alt="Clock icon for time management" title="Time Management"> <span>Skill I'm building</span></div></td>
+              <td data-label="My pick">Critical Thinking, Decision Making, Time Management</td>
+              <td data-label="Why I like it">I practice by analyzing problems carefully and organizing my time before making a choice, whether I am playing games, playing sports, going to school, or solving real-life problems.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 5: GOALS ========== -->
+    <section id="goals" class="card">
+      <img class="deco" src="images/shield.svg" alt="">
+      <h2>Goals</h2>
+      <p>In the next few years, I hope to finish my Computer Science degree and build a strong foundation in networking and data protection. My ultimate goal is to become a skilled cybersecurity professional who can protect systems and fight against real-world digital threats.</p>
+    </section>
+
+    <!-- ========== SECTION 6: REFLECTION ========== -->
+    <section id="reflection" class="card">
+      <img class="deco" src="images/bug.svg" alt="">
+      <h2>Reflection</h2>
+      <p>While making this page, I learned that web design takes a lot of patience when linking index.html and style.css. Fixing layout errors felt like solving a puzzle, which is great practice for my goal in cybersecurity. Compared to my first activity, I improved at organizing my code to make it look much cleaner.</p>
+
+      <!-- details/summary: a click-to-open box -->
+      <details>
+        <summary>Fun fact about me (click to open)</summary>
+        <p>I am studying computer science to become a cybersecurity professional, but I still spend my free time getting beaten by difficult video game bosses.</p>
+      </details>
+    </section>
+
+    <!-- ========== STICKER BOARD ========== -->
+    <section id="stickers" class="card">
+      <img class="deco" src="images/terminal.svg" alt="">
+      <h2>Sticker board</h2>
+      <p>Stickers for the things I love: bugs, games, sports, security, and the terminal.</p>
+      <ul class="stickers">
+        <li><img src="images/bug.svg" alt=""><span>Debugging</span></li>
+        <li><img src="images/controller.svg" alt=""><span>Gaming</span></li>
+        <li><img src="images/basketball.svg" alt=""><span>Basketball</span></li>
+        <li><img src="images/shuttlecock.svg" alt=""><span>Badminton</span></li>
+        <li><img src="images/shield.svg" alt=""><span>Cybersecurity</span></li>
+        <li><img src="images/terminal.svg" alt=""><span>Coding</span></li>
+      </ul>
+    </section>
+
+    <!-- ========== SOURCES ========== -->
+    <aside class="card sources">
+      <h2>Sources and credits</h2>
+      <ul>
+        <!-- A LINKS OF WHAT I USED IN THIS ACTIVITY -->
+        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a> (for learning HTML and CSS)</li>
+        <li>Sticker, spider, web, city, code-background, and app icon drawings (original icons, not official logos): made with the help of Google and edited by me.</li>
+        <li><a href="https://scrimba.com/learn-html-and-css-c0p" target="_blank" rel="noopener">Scrimba</a></li>
+        <li><a href="https://www.codecademy.com/catalog/language/html-css" target="_blank" rel="noopener">Codecademy</a></li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <p>Made by John Grande | Yhann</p>
+    <p><a href="../../index.html">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>
