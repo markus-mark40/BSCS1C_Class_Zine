@@ -1,0 +1,197 @@
+{
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+	body {
+    		margin: 0;
+    		font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+   		line-height: 1.7;
+    		color: #594650;
+    		background: #fff8f6;
+    		.name {
+    		color: #D65F91;
+		}
+	}
+
+	header {
+    		text-align: center;
+    		padding: 45px 20px 30px;
+    		background: linear-gradient(135deg, #ffdce8, #fff0e8);
+   	 	border-bottom: 4px solid #f6c5d5;
+	}
+
+	header h1 {
+   	 	margin: 0;
+    		color: #b65f82;
+    		font-size: clamp(2rem, 5vw, 3rem);
+    		letter-spacing: 1px;
+	}
+
+		header p {
+    			margin: 5px 0 20px;
+    			color: #8f6879;
+    			font-style: italic;
+		}
+/*this is to put style the navigations and make them look like a button switch */
+		nav ul {
+    			display: flex;
+    			justify-content: center;
+    			flex-wrap: wrap;
+    			gap: 12px;
+    			list-style: none;
+    			padding: 0;
+    			margin: 20px 0 0;
+		}
+
+		nav a {
+    			display: inline-block;
+    			padding: 8px 16px;
+    			color: #9f4e70;
+    			background: #fffafc;
+    			border: 1px solid #f2c4d4;
+    			border-radius: 25px;
+    			text-decoration: none;
+    			font-weight: 600;
+    			transition: background 0.2s, transform 0.2s;
+		}
+
+		nav a:hover {
+    			background: #f7c7d9;
+    			transform: translateY(-2px);
+		}	
+
+	main {
+    		width: min(900px, 92%);
+    		margin: 30px auto;
+	}
+
+	section {
+    		margin: 30px 0 12px;
+    		padding: 15px 20px;
+    		background: #ffeaf1;
+    		border-left: 5px solid #e9a6bf;
+    		border-radius: 12px;
+	}
+
+		section h2 {
+    			margin: 0;
+    			color: #a84f73;
+    			font-size: 1.5rem;
+		}
+
+	main p {
+    		padding: 8px 4px;
+	}
+
+		main img {
+    			display: block;
+    			width: min(280px, 100%);
+    			max-height: 350px;
+    			object-fit: cover;
+    			margin: 20px auto;
+    			border: 6px solid #fff;
+    			border-radius: 22px;
+    			box-shadow: 0 6px 18px #d9a9bb66;
+	}
+
+		h3 {
+    			margin: 22px 0 8px;
+    			color: #b65f82;
+		}
+
+		main ul,
+		main ol {
+    			padding-left: 28px;
+		}
+
+			main li {
+    			padding: 4px 0;
+		}
+
+		main li::marker {
+    			color: #d77fa0;
+		}
+
+	table {
+   		width: 100%;
+   		margin: 18px 0 30px;
+    		border-collapse: collapse;
+    		overflow: hidden;
+    		background: #fff;
+    		border-radius: 12px;
+    		box-shadow: 0 4px 14px #d9a9bb33;
+	}
+
+		th {
+   	 		color: #fff;
+    			background: #d985a5;
+    			text-align: left;
+		}
+
+		th,
+		td {
+    			padding: 12px 14px;
+    			border-bottom: 1px solid #f4dce5;
+		}
+
+		tbody tr:nth-child(even) {
+    			background: #fff1f5;
+		}
+
+		tbody tr:hover {
+    			background: #ffe2ec;
+		}
+
+		main a {
+    			color: #b34e78;
+    			font-weight: 600;
+    			text-decoration-thickness: 1px;
+    			text-underline-offset: 3px;
+		}
+
+		main a:hover {
+    			color: #813653;
+		}
+
+		footer {
+    			margin-top: 45px;
+    			padding: 22px 15px;
+    			text-align: center;
+    			color: #865f70;
+    			background: #ffe5ed;
+    			border-top: 2px solid #f4c5d5;
+    			font-size: 0.9rem;
+		}
+
+		footer p {
+    			margin: 0;
+		}
+/*this is to make the webpage udjust on different computer or mobiles*/
+		@media (max-width: 600px) {
+    			header {
+        			padding: 32px 14px 24px;
+    			}
+
+    			nav ul {
+        			gap: 8px;
+    				}
+
+    			nav a {
+        			padding: 7px 11px;
+        			font-size: 0.9rem;
+    			}
+
+    			th,
+    			td {
+        			padding: 9px 7px;
+        			font-size: 0.85rem;
+    			}
+
+    				section h2 {
+        				font-size: 1.25rem;
+    				}
+}

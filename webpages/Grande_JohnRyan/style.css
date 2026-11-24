@@ -1,0 +1,911 @@
+/* ==========================================================
+   style.css
+   Theme:(software engineer / cybersecurity)
+   ========================================================== */
+
+/* ---------- 1. COLORS AND FONTS ----------
+   Change these values to restyle the whole page at once. */
+:root {
+  --bg: #0d1117;          /* page background (like an editor) */
+  --panel: #161b22;       /* cards */
+  --panel-top: #21262d;   /* card title bar, table header */
+  --border: #30363d;      /* thin lines */
+  --text: #e6edf3;        /* main text (high contrast) */
+  --muted: #9aa5b1;       /* captions, comments */
+  --accent: #3fb9a8;      /* teal: headings, borders */
+  --link: #58a6ff;        /* links */
+  --link-hover: #a5d6ff;  /* link hover */
+  --warn: #f2cc60;        /* small highlights */
+
+  /* Common system fonts with fallbacks (class rule) */
+  --font-body: "Segoe UI", Arial, Helvetica, sans-serif;
+  --font-code: Consolas, "Courier New", monospace;
+}
+
+/* ---------- 2. BASIC RESET ---------- */
+* {
+  box-sizing: border-box; /* padding never makes things wider than the screen */
+}
+
+html {
+  scroll-behavior: smooth; /* nav links glide to sections */
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Makes images shrink */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- 3. HEADINGS ---------- */
+h1, h2, h3 {
+  font-family: var(--font-code);
+  line-height: 1.25;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+
+/* Code-comment style marker before every h2 */
+h2::before {
+  content: "// ";
+  color: var(--muted);
+}
+
+h3 {
+  color: var(--warn);
+  font-size: 1.1rem;
+}
+
+/* ---------- 4. HEADER ---------- */
+.site-header {
+  background: var(--panel);
+  border-bottom: 2px solid var(--accent);
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem;
+}
+
+.site-header h1 {
+  margin: 0 0 0.75rem;
+  font-size: 2.2rem;
+  color: var(--text);
+}
+
+/* Terminal prompt before the title */
+.site-header h1::before {
+  content: "> ";
+  color: var(--accent);
+}
+
+/* ONE motion only: a blinking cursor after the title */
+.site-header h1::after {
+  content: "_";
+  color: var(--accent);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.intro {
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+  color: var(--muted);
+}
+
+/* ---------- 5. NAVIGATION (Flexbox) ---------- */
+.nav-list {
+  display: flex;            /* Flexbox: links in a row */
+  flex-wrap: wrap;          /* wraps to the next line on phones */
+  justify-content: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  display: block;
+  padding: 0.4rem 0.9rem;
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  color: var(--text);
+  text-decoration: none;
+  background: var(--panel-top);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* HOVER EFFECT: nav buttons light up */
+.nav-list a:hover,
+.nav-list a:focus {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+/* Back to Home button stands out */
+.nav-list .home-link {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ---------- 6. MAIN LAYOUT ---------- */
+main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+/* ---------- 7. CARDS (each section looks like an editor window) ---------- */
+.card {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2.8rem 1.5rem 1.5rem; /* extra top space for the title bar */
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Fake window title bar with three dots */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2rem;
+  background: var(--panel-top);
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0.7rem;
+  left: 1rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: #ff5f56;
+  box-shadow: 1rem 0 0 #ffbd2e, 2rem 0 0 #27c93f; /* two more dots */
+}
+
+/* HOVER EFFECT: card lifts and glows */
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 20px rgba(63, 185, 168, 0.18);
+}
+
+/* ---------- 8. HELLO SECTION (Grid: image beside text) ---------- */
+.hello {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid var(--accent);
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ---------- 9. TEXT ELEMENTS ---------- */
+strong {
+  color: var(--accent);
+}
+
+ul {
+  padding-left: 1.3rem;
+}
+
+li {
+  margin-bottom: 0.3rem;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover,
+a:focus {
+  color: var(--link-hover);
+  text-decoration: none;
+}
+
+/* Quote looks like a code comment */
+blockquote {
+  margin: 1rem 0 0;
+  padding: 0.6rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--bg);
+  font-family: var(--font-code);
+  color: var(--muted);
+}
+
+blockquote::before {
+  content: "/* ";
+}
+
+blockquote::after {
+  content: " */";
+}
+
+/* Click-to-open box looks like a code block */
+details {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+summary {
+  cursor: pointer;
+  font-family: var(--font-code);
+  color: var(--warn);
+}
+
+summary:hover {
+  color: var(--link-hover);
+}
+
+/* ---------- 10. TABLE ---------- */
+.table-wrap {
+  overflow-x: auto; /* table scrolls inside itself, not the whole page */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 0.7rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: var(--panel-top);
+  color: var(--accent);
+  font-family: var(--font-code);
+}
+
+/* HOVER EFFECT: row highlight */
+tbody tr:hover {
+  background: var(--panel-top);
+}
+
+/* ---------- 11. FOOTER ---------- */
+.site-footer {
+  background: var(--panel);
+  border-top: 2px solid var(--accent);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ---------- 12. SMALL SCREENS ---------- */
+@media (max-width: 600px) {
+  .site-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .hello {
+    grid-template-columns: 1fr; /* stack image above text */
+    text-align: center;
+  }
+
+  figure img {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .card {
+    padding: 2.8rem 1rem 1.2rem;
+  }
+}
+
+/* ---------- 13. ACCESSIBILITY ---------- */
+/* Turns off the blinking cursor for people who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .site-header h1::after {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------- 14. STICKERS ---------- */
+/* Small sticker above the title in the header */
+.header-sticker {
+  display: block;
+  width: 80px;
+  margin: 0 auto 0.5rem;
+  transform: rotate(-8deg);
+}
+
+/* Sticker board: Flexbox row that wraps on phones */
+.stickers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.stickers li {
+  width: 110px;
+  text-align: center;
+  font-family: var(--font-code);
+  font-size: 0.8rem;
+  color: var(--muted);
+  transition: transform 0.25s; /* smooth hover */
+}
+
+/* Each sticker is tilted a little, like it was stuck on by hand */
+.stickers li:nth-child(odd)  { transform: rotate(-4deg); }
+.stickers li:nth-child(even) { transform: rotate(3deg); }
+
+/* HOVER EFFECT: sticker straightens and grows */
+.stickers li:hover {
+  transform: rotate(0deg) scale(1.15);
+}
+
+.stickers img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.stickers span {
+  display: block;
+  margin-top: 0.3rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stickers li {
+    transition: none;
+  }
+}
+
+/* ---------- 15. CRAWLING SPIDER ---------- */
+/* A spider that wanders across the whole page, CSS only */
+.spider {
+  position: fixed;          /* stays on screen while you scroll */
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 64px;
+  z-index: 50;
+  pointer-events: none;     /* clicks go through it, so it never blocks links */
+  animation: crawl 60s linear infinite;
+}
+
+/* The path: each line is "when in the animation" + "where the spider is" + "which way it faces".
+   0deg = facing up, 90deg = right, 180deg = down, -90deg = left.
+   Positions are percentages of the screen, so it works on any device. */
+@keyframes crawl {
+  0% { transform: translate(calc(12vw - var(--half)), calc(88vh - var(--half))) rotate(90deg); }
+  8.44% { transform: translate(calc(50vw - var(--half)), calc(88vh - var(--half))) rotate(90deg); }
+  9.11% { transform: translate(calc(50vw - var(--half)), calc(88vh - var(--half))) rotate(0deg); }
+  14.22% { transform: translate(calc(50vw - var(--half)), calc(65vh - var(--half))) rotate(0deg); }
+  15.78% { transform: translate(calc(50vw - var(--half)), calc(65vh - var(--half))) rotate(0deg); }
+  16.44% { transform: translate(calc(50vw - var(--half)), calc(65vh - var(--half))) rotate(90deg); }
+  23.11% { transform: translate(calc(80vw - var(--half)), calc(65vh - var(--half))) rotate(90deg); }
+  23.78% { transform: translate(calc(80vw - var(--half)), calc(65vh - var(--half))) rotate(0deg); }
+  29.33% { transform: translate(calc(80vw - var(--half)), calc(40vh - var(--half))) rotate(0deg); }
+  30.0% { transform: translate(calc(80vw - var(--half)), calc(40vh - var(--half))) rotate(-90deg); }
+  40.0% { transform: translate(calc(35vw - var(--half)), calc(40vh - var(--half))) rotate(-90deg); }
+  41.56% { transform: translate(calc(35vw - var(--half)), calc(40vh - var(--half))) rotate(-90deg); }
+  42.22% { transform: translate(calc(35vw - var(--half)), calc(40vh - var(--half))) rotate(0deg); }
+  47.78% { transform: translate(calc(35vw - var(--half)), calc(15vh - var(--half))) rotate(0deg); }
+  48.44% { transform: translate(calc(35vw - var(--half)), calc(15vh - var(--half))) rotate(90deg); }
+  55.11% { transform: translate(calc(65vw - var(--half)), calc(15vh - var(--half))) rotate(90deg); }
+  55.78% { transform: translate(calc(65vw - var(--half)), calc(15vh - var(--half))) rotate(180deg); }
+  64.0% { transform: translate(calc(65vw - var(--half)), calc(52vh - var(--half))) rotate(180deg); }
+  65.56% { transform: translate(calc(65vw - var(--half)), calc(52vh - var(--half))) rotate(180deg); }
+  66.22% { transform: translate(calc(65vw - var(--half)), calc(52vh - var(--half))) rotate(90deg); }
+  72.22% { transform: translate(calc(92vw - var(--half)), calc(52vh - var(--half))) rotate(90deg); }
+  72.89% { transform: translate(calc(92vw - var(--half)), calc(52vh - var(--half))) rotate(180deg); }
+  80.89% { transform: translate(calc(92vw - var(--half)), calc(88vh - var(--half))) rotate(180deg); }
+  81.56% { transform: translate(calc(92vw - var(--half)), calc(88vh - var(--half))) rotate(270deg); }
+  99.33% { transform: translate(calc(12vw - var(--half)), calc(88vh - var(--half))) rotate(270deg); }
+  100.0% { transform: translate(calc(12vw - var(--half)), calc(88vh - var(--half))) rotate(90deg); }
+}
+
+/* Legs wiggle in turns, like a real walking spider */
+.legs {
+  transform-origin: 50px 50px;
+  animation: wiggle 0.3s ease-in-out infinite alternate;
+}
+
+.legs-b {
+  animation-direction: alternate-reverse;
+}
+
+@keyframes wiggle {
+  from { transform: rotate(-6deg); }
+  to   { transform: rotate(6deg); }
+}
+
+/* Smaller spider on phones */
+@media (max-width: 600px) {
+  .spider {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Hide the spider for people who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .spider {
+    display: none;
+  }
+}
+
+/* ---------- 16. SPIDER WEBS IN THE CORNERS ---------- */
+/* Hidden helper that holds the web drawing (used by the four corner webs) */
+.web-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+/* Each web sits in a corner of the screen and ignores clicks */
+.web {
+  position: fixed;
+  width: 130px;
+  height: 130px;
+  opacity: 0.55;            /* soft, so text stays easy to read */
+  z-index: 40;              /* under the spider (50) */
+  pointer-events: none;
+}
+
+/* The drawing is for the top-left corner; the others are mirrored copies */
+.web-tl { top: 0;    left: 0; }
+.web-tr { top: 0;    right: 0;  transform: scaleX(-1); }
+.web-bl { bottom: 0; left: 0;   transform: scaleY(-1); }
+.web-br { bottom: 0; right: 0;  transform: scale(-1, -1); }
+
+/* Smaller webs on phones */
+@media (max-width: 600px) {
+  .web {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* ---------- 17. HACKER BACKGROUND + GLASS CARDS ---------- */
+/* Layer 1: falling code pattern (fixed, so it stays while you scroll) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  background:
+    linear-gradient(to bottom, rgba(13, 17, 23, 0.55), rgba(13, 17, 23, 0.85)), /* darkens so text stays readable */
+    url("images/code-bg.svg") repeat 0 0 / 520px 400px;
+}
+
+/* Layer 2: neon city skyline along the bottom of the screen */
+body::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 55vh;
+  z-index: -1;
+  background: url("images/city.svg") no-repeat center bottom / cover;
+  pointer-events: none;
+}
+
+/* Glass effect: cards, header, and footer become see-through */
+.site-header,
+.site-footer {
+  background: rgba(22, 27, 34, 0.78);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.card {
+  background: rgba(22, 27, 34, 0.78);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.card::before {
+  background: rgba(33, 38, 45, 0.85); /* window title bar, slightly more solid */
+}
+
+th {
+  background: rgba(33, 38, 45, 0.9);
+}
+
+/* The quote and fun-fact boxes stay readable on glass */
+blockquote,
+details {
+  background: rgba(13, 17, 23, 0.6);
+}
+
+/* ---------- 18. FLOATING iPHONE-STYLE SECTIONS ---------- */
+/* Each section is now a rounded "floating" card with a soft shadow underneath,
+   a gentle bobbing motion, and a bouncy pop-in like iPhone animations. */
+
+/* Staggering: each section gets a number (--i) so they pop in one after another */
+main > * { --i: 0; }
+main > *:nth-child(2) { --i: 1; }
+main > *:nth-child(3) { --i: 2; }
+main > *:nth-child(4) { --i: 3; }
+main > *:nth-child(5) { --i: 4; }
+main > *:nth-child(6) { --i: 5; }
+main > *:nth-child(7) { --i: 6; }
+main > *:nth-child(8) { --i: 7; }
+
+/* ----- Header floats too, with a Dynamic Island pill like an iPhone ----- */
+.site-header {
+  position: relative;
+  width: calc(100% - 2rem);
+  max-width: 788px;
+  margin: 1rem auto 0;
+  padding-top: 3.4rem;                      /* room for the pill */
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 30px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+  animation: drop-in 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) backwards,
+             float 7s ease-in-out infinite;
+  animation-delay: 0s, 0.9s;
+}
+
+/* The black "Dynamic Island" pill */
+.site-header::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  translate: -50% 0;
+  width: 96px;
+  height: 24px;
+  border-radius: 999px;
+  background: #000;
+}
+
+/* ----- Cards: rounder, floating shadow, frosted glass ----- */
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),   /* springy bounce */
+              box-shadow 0.3s, border-color 0.3s;
+  animation: pop-in 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) backwards,
+             float 6s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.12s + 0.15s),
+                   calc(var(--i) * 0.45s + 1.2s);
+}
+
+/* The title bar corners must match the rounder card */
+.card::before {
+  border-radius: 24px 24px 0 0;
+}
+
+/* HOVER: card lifts higher, like picking up an app */
+.card:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: var(--accent);
+  box-shadow: 0 22px 44px rgba(63, 185, 168, 0.25);
+}
+
+/* PRESS: card squishes a little, like tapping on an iPhone */
+.card:active {
+  transform: scale(0.98);
+}
+
+/* ----- Footer floats with a "home indicator" bar ----- */
+.site-footer {
+  position: relative;
+  width: calc(100% - 2rem);
+  max-width: 788px;
+  margin: 0 auto 1.5rem;
+  padding-bottom: 2.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+  animation: pop-in 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s backwards,
+             float 6.5s ease-in-out 2.1s infinite;
+}
+
+.site-footer::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  translate: -50% 0;
+  width: 110px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+/* ----- Nav buttons: springy like iPhone buttons ----- */
+.nav-list a {
+  border-radius: 999px;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  transform: translateY(-2px) scale(1.08);
+}
+
+.nav-list a:active {
+  transform: scale(0.94);
+}
+
+/* ----- Stickers: bouncy, and they jiggle on hover like iPhone app icons ----- */
+.stickers li {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.stickers li:hover {
+  animation: jiggle 0.25s ease-in-out infinite alternate;
+}
+
+/* ----- The animations ----- */
+/* Gentle up-and-down floating (uses "translate" so hover effects still work) */
+@keyframes float {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -7px; }
+}
+
+/* Slides up and grows in with a bounce */
+@keyframes pop-in {
+  from { opacity: 0; translate: 0 40px; scale: 0.9; }
+  to   { opacity: 1; translate: 0 0;    scale: 1; }
+}
+
+/* Header drops in from the top */
+@keyframes drop-in {
+  from { opacity: 0; translate: 0 -40px; scale: 0.9; }
+  to   { opacity: 1; translate: 0 0;     scale: 1; }
+}
+
+/* Little wiggle like iPhone apps when you edit the home screen */
+@keyframes jiggle {
+  from { rotate: -3deg; }
+  to   { rotate: 3deg; }
+}
+
+/* Turn off all the floating and bouncing for people who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .site-header,
+  .card,
+  .site-footer,
+  .stickers li:hover {
+    animation: none;
+  }
+}
+
+/* ---------- 19. SURPRISE UPGRADE ---------- */
+/* Each section gets its own accent color (--c) */
+#hello { --c: #3fb9a8; }
+#about { --c: #ff9f43; }
+#path { --c: #d2a8ff; }
+#favorites { --c: #58a6ff; }
+#goals { --c: #ff6b9d; }
+#reflection { --c: #f2cc60; }
+#stickers { --c: #27c93f; }
+.card h2 { color: var(--c, var(--accent)); }
+.card:hover { border-color: var(--c, var(--accent)); }
+.card { border-top: 3px solid var(--c, var(--accent)); }
+
+/* Glowing title */
+.site-header h1 { text-shadow: 0 0 18px rgba(63, 185, 168, 0.6); }
+
+/* A floating sticker stuck on the corner of every section */
+.deco {
+  position: absolute;
+  top: -22px;
+  right: -6px;
+  width: 72px;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.55));
+  animation: wobble 4s ease-in-out infinite;
+}
+
+@keyframes wobble {
+  0%, 100% { rotate: -8deg; translate: 0 0; }
+  50%      { rotate: 8deg;  translate: 0 -6px; }
+}
+
+/* Pictures for apps and skills in the table */
+.app-icon {
+  width: 44px;
+  height: 44px;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.app-icon:hover { transform: rotate(-10deg) scale(1.25); }
+.skill-icons { display: inline-flex; gap: 0.4rem; margin-bottom: 0.4rem; }
+.skill-icons .app-icon { margin-right: 0; }
+
+/* Animated aurora glow behind everything */
+html::before {
+  content: "";
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -3;
+  background:
+    radial-gradient(45vw 40vh at 15% 15%, rgba(137, 87, 229, 0.45), transparent),
+    radial-gradient(45vw 40vh at 85% 30%, rgba(63, 185, 168, 0.4), transparent),
+    radial-gradient(55vw 40vh at 50% 95%, rgba(88, 166, 255, 0.35), transparent);
+  animation: aurora 16s ease-in-out infinite alternate;
+}
+
+@keyframes aurora {
+  from { filter: hue-rotate(0deg);  transform: scale(1); }
+  to   { filter: hue-rotate(70deg); transform: scale(1.15); }
+}
+
+/* Glowing particles floating upward */
+html::after {
+  content: "";
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -3;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(88, 166, 255, 0.9) 0 2px, transparent 3px),
+    radial-gradient(circle, rgba(63, 185, 168, 0.9) 0 1.5px, transparent 2.5px);
+  background-size: 220px 300px, 340px 600px;
+  background-position: 0 0, 90px 120px;
+  animation: rise 25s linear infinite;
+}
+
+@keyframes rise {
+  to { background-position: 0 -300px, 90px -480px; }
+}
+
+/* The code pattern now scrolls slowly, and lets the aurora show through */
+body::before {
+  background:
+    linear-gradient(to bottom, rgba(13, 17, 23, 0.35), rgba(13, 17, 23, 0.7)),
+    url("images/code-bg.svg") repeat 0 0 / 520px 400px;
+  animation: code-drift 40s linear infinite;
+}
+
+@keyframes code-drift {
+  from { background-position: 0 0, 0 0; }
+  to   { background-position: 0 0, 520px 400px; }
+}
+
+@media (max-width: 600px) {
+  .deco { width: 56px; top: -18px; }
+  .app-icon { width: 38px; height: 38px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deco, html::before, html::after, body::before { animation: none; }
+}
+
+/* ---------- 20. FIXES: TABLE LAYOUT + SMOOTH SCROLLING ---------- */
+/* ----- Table: organized columns on laptops ----- */
+th:nth-child(1), td:nth-child(1) { width: 27%; }
+th:nth-child(2), td:nth-child(2) { width: 25%; }
+th:nth-child(3), td:nth-child(3) { width: 48%; }
+
+.cat {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;          /* icons drop to the next line instead of overflowing */
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.cat .app-icon { margin-right: 0; }
+
+/* ----- Table: on phones, each row becomes its own small card ----- */
+@media (max-width: 700px) {
+  table, tbody, tr, td { display: block; width: 100%; }
+  thead { display: none; }          /* labels are shown inside each row instead */
+
+  tr {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: rgba(13, 17, 23, 0.55);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+
+  td { border-bottom: none; padding: 0.3rem 0; }
+  td:nth-child(n) { width: 100%; }
+
+  td[data-label="My pick"]::before,
+  td[data-label="Why I like it"]::before {
+    content: attr(data-label);
+    display: block;
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    color: var(--accent);
+  }
+
+  tbody tr:hover { background: rgba(13, 17, 23, 0.55); }
+}
+
+/* ----- Smooth scrolling: remove the heaviest effects ----- */
+/* Blur filters are the #1 cause of scroll lag, so they are replaced with a solid glass color */
+.site-header, .site-footer, .card {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background: rgba(18, 23, 30, 0.9);
+}
+
+/* These animations repaint the whole screen every frame, so they are turned off */
+body::before, html::after { animation: none; }
+html::after { display: none; }
+html::before { animation: none; }
+
+/* The spider now moves with transform (smooth) instead of left/top (laggy) */
+.spider { --half: 32px; will-change: transform; }
+@media (max-width: 600px) { .spider { --half: 24px; } }
+
+/* Aurora glow: gentle and light, laptops only */
+@keyframes aurora-soft { to { transform: scale(1.12); } }
+@media (min-width: 769px) and (prefers-reduced-motion: no-preference) {
+  html::before { animation: aurora-soft 20s ease-in-out infinite alternate; will-change: transform; }
+}
+
+/* Phones: no floating or bobbing, so scrolling stays smooth */
+@media (max-width: 768px) {
+  .card, .site-header, .site-footer, .deco { animation: none; }
+}

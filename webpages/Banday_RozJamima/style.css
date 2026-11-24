@@ -1,0 +1,717 @@
+/* ==========================================
+   ROZ'S TANGLED LITTLE WORLD
+   Y2K DISNEY PRINCESS THEME
+========================================== */
+
+
+/* 1. GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #eee4fa;
+    background-image:
+        radial-gradient(#ffffff 1px, transparent 1px),
+        linear-gradient(135deg, #f8eafa, #e9dcfa, #fce8f2);
+    background-size: 22px 22px, cover;
+    color: #50365e;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* 2. TOP AND BOTTOM BORDERS */
+
+.top-border,
+.bottom-border {
+    width: 100%;
+    height: 43px;
+    background-image: url("images/border 4.webp");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: auto 43px;
+}
+
+.bottom-border {
+    transform: rotate(180deg);
+}
+
+
+/* 3. HEADER */
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 55px 20px 35px;
+    background: linear-gradient(
+        180deg,
+        #d9c4f0,
+        #f9e5f2,
+        #eee2fa
+    );
+    border-bottom: 3px solid #e7c5e4;
+    overflow: hidden;
+}
+
+.sun-decoration {
+    width: 95px;
+    margin: 0 auto 12px;
+    filter: drop-shadow(0 0 8px #f5d77d);
+}
+
+.welcome-text {
+    color: #956c9f;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    color: #69447d;
+    font-size: clamp(32px, 6vw, 58px);
+    font-weight: normal;
+    text-shadow:
+        2px 2px #ffffff,
+        4px 4px #e8c4df;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #8b6898;
+    font-style: italic;
+    font-size: 16px;
+}
+
+
+/* 4. NAVIGATION */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+nav a {
+    background: linear-gradient(
+        180deg,
+        #fffafd,
+        #f4dcef
+    );
+    border: 1px solid #d5add4;
+    border-radius: 25px;
+    padding: 8px 17px;
+    color: #805a91;
+    font-size: 13px;
+    box-shadow: 0 3px 7px #b99acb;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background: #d8b8ec;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 12px #aa88c4;
+}
+
+header > a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #89669a;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+
+/* 5. MAIN CONTENT */
+
+main {
+    width: 92%;
+    max-width: 1050px;
+    margin: 35px auto;
+}
+
+.content-section,
+.intro-section {
+    position: relative;
+    background: rgba(255, 250, 255, 0.95);
+    border: 2px solid #e2c6e8;
+    border-radius: 22px;
+    padding: 45px 40px;
+    margin-bottom: 28px;
+    box-shadow:
+        0 5px 15px rgba(117, 79, 139, 0.13),
+        inset 0 0 15px rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+}
+
+
+/* 6. REPEATING LACE BORDERS */
+
+.content-section::before,
+.intro-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-image: url("images/border.webp");
+    background-repeat: repeat-x;
+    background-size: auto 30px;
+    background-position: center;
+    pointer-events: none;
+}
+
+.content-section::after,
+.intro-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-image: url("images/border.webp");
+    background-repeat: repeat-x;
+    background-size: auto 30px;
+    background-position: center;
+    transform: rotate(180deg);
+    pointer-events: none;
+}
+
+
+/* 7. INTRODUCTION */
+
+.intro-section {
+    padding: 55px 40px;
+    background: linear-gradient(
+        135deg,
+        #fff9fd,
+        #f2e4fa,
+        #fff0f7
+    );
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+.profile-container {
+    text-align: center;
+    flex: 0 1 240px;
+}
+
+.profile-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid #ffffff;
+    outline: 3px solid #d8b4e4;
+    box-shadow: 0 5px 18px #b99bc9;
+}
+
+.image-caption {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #9b75a8;
+    font-style: italic;
+}
+
+.intro-text {
+    flex: 1 1 350px;
+    max-width: 550px;
+}
+
+.small-heading {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #b17ba8;
+}
+
+.intro-text h2 {
+    font-size: 48px;
+    color: #704d87;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.intro-text p {
+    margin-bottom: 12px;
+}
+
+.butterfly {
+    position: absolute;
+    width: 75px;
+    pointer-events: none;
+}
+
+.intro-butterfly {
+    right: 25px;
+    top: 35px;
+}
+
+
+/* 8. DIVIDERS */
+
+.divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    overflow: hidden;
+}
+
+.divider img {
+    width: min(540px, 90%);
+    height: auto;
+}
+
+
+/* 9. SECTION HEADINGS */
+
+.section-label {
+    color: #b17ba8;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.content-section h2 {
+    color: #704d87;
+    text-align: center;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 22px;
+}
+
+.content-section h3 {
+    color: #805b91;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.content-section p {
+    margin-bottom: 15px;
+}
+
+.section-intro {
+    text-align: center;
+}
+
+.section-image {
+    width: 100px;
+    margin: 20px auto 0;
+    filter: drop-shadow(0 3px 5px #e5c4e6);
+}
+
+
+/* 10. MY JOURNEY */
+
+.journey-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.journey-content > div {
+    flex: 1;
+}
+
+.rapunzel-image {
+    width: 180px;
+    max-height: 260px;
+    object-fit: contain;
+}
+
+
+/* 11. THINGS I LOVE */
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.interest-card {
+    text-align: center;
+    background: linear-gradient(
+        145deg,
+        #fffaff,
+        #f3e4f7
+    );
+    border: 1px solid #e1c6e6;
+    border-radius: 17px;
+    padding: 18px 14px;
+    box-shadow: 0 4px 9px rgba(133, 91, 150, 0.12);
+    transition: 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-7px) scale(1.02);
+    box-shadow: 0 8px 17px rgba(133, 91, 150, 0.2);
+}
+
+.interest-card img {
+    width: 105px;
+    height: 105px;
+    object-fit: contain;
+    margin: 0 auto 12px;
+}
+
+.interest-card h3 {
+    font-size: 17px;
+}
+
+.interest-card p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+
+/* 12. FAVORITE WEBSITES */
+
+.website-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.website-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 220px;
+    padding: 25px 18px;
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f2dff3
+    );
+    border: 2px solid #e3c4e7;
+    border-radius: 20px;
+    box-shadow: 0 5px 12px rgba(128, 87, 150, 0.14);
+    transition: 0.3s ease;
+}
+
+.website-card:hover {
+    transform: translateY(-7px);
+    background: linear-gradient(
+        145deg,
+        #fbeaf7,
+        #e4d0f5
+    );
+    box-shadow: 0 9px 18px rgba(128, 87, 150, 0.23);
+}
+
+.website-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    background: #e8d4f1;
+    border: 2px solid #d6b5e3;
+    color: #805b91;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.website-card h3 {
+    font-size: 21px;
+}
+
+.website-card p {
+    font-size: 13px;
+}
+
+.visit-link {
+    color: #a06ba7;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+
+/* 13. FAVORITES AND SKILLS */
+
+.favorites-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 25px;
+}
+
+.favorite-list,
+.skills-table {
+    background: #fcf5fc;
+    border: 1px solid #e5cde8;
+    border-radius: 15px;
+    padding: 22px;
+}
+
+.favorite-list ul,
+.goals-list,
+.credits-section ul {
+    padding-left: 22px;
+}
+
+.favorite-list li,
+.goals-list li,
+.credits-section li {
+    margin-bottom: 8px;
+}
+
+.skills-table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th,
+td {
+    border: 1px solid #dfc4e6;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #e9d8f2;
+    color: #684b7c;
+}
+
+td {
+    background: #fffaff;
+}
+
+
+/* 14. GOALS */
+
+.goals-section {
+    background: linear-gradient(
+        135deg,
+        #fff9fc,
+        #f0e2fa,
+        #fff0f6
+    );
+}
+
+.goal-flower {
+    width: 100px;
+    margin: 0 auto 15px;
+    filter: drop-shadow(0 3px 8px #e4c66e);
+}
+
+.goals-list {
+    max-width: 650px;
+    margin: 15px auto 25px;
+}
+
+.goal-quote {
+    color: #a477a5;
+    text-align: center;
+    font-style: italic;
+}
+
+
+/* 15. CREDITS */
+
+.credits-section {
+    font-size: 14px;
+}
+
+.credit-note {
+    color: #9b719f;
+    font-style: italic;
+}
+
+
+/* 16. FOOTER */
+
+footer {
+    position: relative;
+    text-align: center;
+    padding: 45px 20px;
+    background: linear-gradient(
+        180deg,
+        #eadcf7,
+        #d7c1ed
+    );
+    color: #704d87;
+    border-top: 2px solid #d9b9e4;
+}
+
+.footer-sun {
+    width: 65px;
+    margin: 0 auto 15px;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 7px 18px;
+    background: #fff8fc;
+    border: 1px solid #d9b7e3;
+    border-radius: 20px;
+    color: #805b91;
+    transition: 0.3s ease;
+}
+
+.back-to-top:hover {
+    background: #d8b8ec;
+    color: #ffffff;
+}
+
+.footer-small {
+    font-size: 12px;
+    color: #9876a4;
+}
+
+footer > a:last-child {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+
+/* 17. TABLET RESPONSIVE DESIGN */
+
+@media screen and (max-width: 750px) {
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .content-section,
+    .intro-section {
+        padding: 40px 22px;
+    }
+
+    .intro-content {
+        gap: 25px;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+
+    .intro-text h2 {
+        font-size: 38px;
+    }
+
+    .interest-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .website-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .favorites-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-content {
+        flex-direction: column;
+    }
+
+    .rapunzel-image {
+        width: 150px;
+    }
+
+    .intro-butterfly {
+        width: 50px;
+        right: 12px;
+        top: 25px;
+    }
+}
+
+
+/* 18. MOBILE RESPONSIVE DESIGN */
+
+@media screen and (max-width: 450px) {
+
+    header {
+        padding: 35px 12px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 7px 11px;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-photo {
+        width: 185px;
+        height: 185px;
+    }
+
+    .content-section h2 {
+        font-size: 26px;
+    }
+
+    .content-section,
+    .intro-section {
+        padding: 38px 17px;
+    }
+
+    .top-border,
+    .bottom-border {
+        height: 30px;
+        background-size: auto 30px;
+    }
+
+    table {
+        font-size: 11px;
+    }
+}

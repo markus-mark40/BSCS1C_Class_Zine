@@ -1,0 +1,335 @@
+/* CSS Variables for black and white dark noble aesthetic */
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #a0a0a0;
+    --accent-color: #ffffff;
+    --background-color: #000000;
+    --card-background: #0a0a0a;
+    --text-color: #e0e0e0;
+    --light-text: #707070;
+    --white: #ffffff;
+    --border-radius: 2px;
+    --spacing: 1.5rem;
+    --font-main: 'Times New Roman', Times, serif;
+    --font-heading: 'Times New Roman', Times, serif;
+}
+
+/* Global styles and reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    letter-spacing: 0.02em;
+}
+
+/* Header styling - noble and elegant */
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    letter-spacing: 0.08em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem 1.8rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Main content layout - more organic, human-like flow */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Section styling - noble and elegant */
+.section {
+    background-color: var(--card-background);
+    padding: 2.5rem;
+    border: 1px solid #1a1a1a;
+    transition: border-color 0.4s ease;
+}
+
+.section:hover {
+    border-color: #333;
+}
+
+/* Heading hierarchy - noble and elegant */
+h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    font-weight: normal;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Paragraph and text styling - noble and elegant */
+p {
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+strong {
+    color: var(--primary-color);
+    font-weight: normal;
+    letter-spacing: 0.05em;
+}
+
+.summary {
+    font-style: italic;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+/* Profile image styling - noble and elegant */
+.profile-image {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.profile-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #333;
+    filter: grayscale(100%);
+    transition: border-color 0.4s ease, filter 0.4s ease;
+}
+
+.profile-image img:hover {
+    border-color: var(--primary-color);
+    filter: grayscale(0%);
+}
+
+.profile-image figcaption {
+    margin-top: 1.2rem;
+    color: var(--light-text);
+    font-style: italic;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+}
+
+/* List styling - noble and elegant */
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+ul li:before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+/* Table styling - noble and elegant */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+table thead {
+    background-color: #111;
+    color: var(--primary-color);
+}
+
+table th,
+table td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #222;
+}
+
+table tbody tr:hover {
+    background-color: #151515;
+}
+
+/* Quote section styling - noble and elegant */
+.quote-section {
+    background-color: #111;
+    color: var(--text-color);
+}
+
+.quote-section h2 {
+    color: var(--primary-color);
+}
+
+blockquote {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem;
+    border-left: 2px solid var(--primary-color);
+    margin: 2rem 0;
+    color: var(--primary-color);
+    letter-spacing: 0.05em;
+}
+
+/* Link styling - noble and elegant */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Footer styling - noble and elegant */
+footer {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 3rem 0;
+    border-top: 1px solid #333;
+    color: var(--secondary-color);
+    letter-spacing: 0.05em;
+}
+
+footer nav a {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #111;
+    color: var(--primary-color);
+    border: 1px solid #333;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+footer nav a:hover {
+    background-color: #1a1a1a;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    body {
+        padding: 1.5rem;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        padding: 1.5rem;
+    }
+
+    blockquote {
+        font-size: 1.2rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    table th,
+    table td {
+        padding: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .profile-image img {
+        max-width: 200px;
+    }
+}

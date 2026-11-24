@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The personal website of Razzel Atuli, a first-year BSCS student at Bicol University.">
+  <title>Razzel Atuli | About Me</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- The nav bar stays at the top and links to each section by id. -->
+  <nav class="topbar" aria-label="Main navigation">
+    <a class="brand" href="#top">Razzel Atuli</a>
+
+    <!-- CSS-only menu: navigating to #primary-menu opens the overlay.
+         The two links share one pill; the open one fades into the close one. -->
+    <div class="nav-toggle">
+      <a class="nav-toggle-btn nav-toggle-open" href="#primary-menu" aria-label="Open menu" aria-controls="primary-menu">
+        <span class="nav-toggle-bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span class="nav-toggle-text">Menu</span>
+      </a>
+      <a class="nav-toggle-btn nav-toggle-close" href="#nav-closed" aria-label="Close menu">
+        <span class="nav-toggle-bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span class="nav-toggle-text">Close</span>
+      </a>
+    </div>
+
+    <ul id="primary-menu">
+      <li><a href="#hello">Hello</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#path">Path</a></li>
+      <li><a href="#favorites">Favorites</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#reflection">Reflection</a></li>
+    </ul>
+
+    <!-- Tapping the dimmed page behind the menu closes it. -->
+    <a class="nav-backdrop" href="#nav-closed" aria-hidden="true" tabindex="-1"></a>
+    <a class="home-fab" href="../../index.html">
+      <svg class="home-fab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+           aria-hidden="true" focusable="false">
+        <path d="M3 10.5 12 3l9 7.5"></path>
+        <path d="M5 9.5V21h14V9.5"></path>
+        <path d="M9 21v-6h6v6"></path>
+      </svg>
+      <span>Home</span>
+    </a>
+  </nav>
+
+  <header class="hero">
+    <h1>Razzel Atuli</h1>
+    <p class="tagline">1st Year BSCS Student</p>
+  </header>
+
+  <main id="main">
+    <section id="hello">
+      <h2>Hello</h2>
+      <div class="story-body">
+        <p class="lead">
+          I'm <strong>Razzel Atuli</strong>, a first-year BS Computer Science student
+          at Bicol University.
+        </p>
+        <p>
+          I'm an early riser who likes keeping things light, enjoys coffee
+          mornings, and is learning to build things for the web.
+        </p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About me</h2>
+
+      <div class="about-grid">
+        <!-- The <img> tag shows the image in "src"; "alt" describes it for screen readers. -->
+        <figure class="portrait">
+          <img
+            src="images/download.jpg"
+            alt="Portrait of Razzel Atuli"
+            width="190"
+            height="190">
+        </figure>
+
+        <div class="about-text">
+          <p>
+            Hello! My name is <strong>Razzel Atuli</strong>. I am a first-year BSCS
+            student at Bicol University, and I am from Mariawa, Legazpi City. I hope
+            to learn more about programming and web development in the future.
+          </p>
+          <p>
+            I'm not just a stay-at-home person. I like going out and drinking with my
+            friends, and I like having fun. People say I give off a light, approachable
+            vibe, and I'm usually the one laughing in the friend group.
+          </p>
+        </div>
+      </div>
+
+      <h3>A typical day</h3>
+      <p>
+        I'm an early riser. I usually wake up around 6, sometimes 5:30, and have
+        breakfast and coffee with my father and brother before they leave for work and
+        class. If I have a quiz or presentation, I use the morning to review. If not,
+        I read manhwa, scroll through social media, or play a game. Between classes, I
+        kill time in the library with my friends. At home I relax, and I save my
+        assignments and activities for the night before I sleep around 10 or 11.
+      </p>
+
+      <h3>What I'm into</h3>
+      <ul class="chip-list">
+        <li>
+          Action-fantasy manhwa </li>
+        <li>Scrolling through social media</li>
+        <li>Playing Mobile Legends</li>
+        <li>Listening to music on Spotify</li>
+        <li>Going out and having fun with my friends</li>
+      </ul>
+    </section>
+
+    <section id="path">
+      <h2>My path into computing</h2>
+      <p>
+        My interest in computing started on social media. I kept seeing programming
+        videos, and honestly the money in the field caught my attention too, but the
+        videos are what made me curious.
+      </p>
+      <p>
+        Civil engineering was actually my first choice, so BSCS wasn't the plan. Still,
+        I was super happy just to be studying at Bicol University, and BSCS is really
+        fun, just as I thought it would be. Now I'm enjoying it a lot, and even though
+        I didn't get my first choice, I'm really happy I ended up in Computer Science.
+      </p>
+    </section>
+
+    <section id="favorites">
+      <h2>Favorites or skills</h2>
+      <p>
+        Here are some of the things I enjoy and the skills I'm working on.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>My favorite apps, reads, and skills I'm building</caption>
+          <thead>
+            <tr>
+              <th scope="col">Category</th>
+              <th scope="col">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Favorite apps</th>
+              <td>Spotify, Mobile Legends, Tiktok, Facebook, Mihon</td>
+            </tr>
+            <tr>
+              <th scope="row">Favorite reads</th>
+              <td>Action-fantasy manhwa with a bit of romance</td>
+            </tr>
+            <tr>
+              <th scope="row">Skills I'm building</th>
+              <td>C Language, HTML, CSS, programming fundamentals</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        One website I enjoy visiting is listed below because it has all the music I love in one place.
+      </p>
+      <p>
+        <!-- "href" is the link address, and target="_blank" opens it in a new tab. -->
+        <a class="btn-link" href="https://spotify.com" target="_blank" rel="noopener">
+          Spotify
+        </a>
+      </p>
+    </section>
+
+    <section id="goals">
+      <h2>Goals</h2>
+
+      <h3>My top 3 goals</h3>
+      <ol class="goal-list">
+        <li>Finish my degree</li>
+        <li>Be a successful software developer</li>
+        <li>Live life to the fullest</li>
+      </ol>
+
+      <h3>In the next few years</h3>
+      <p>
+        Making this website got me really interested in web development, so my first
+        goal is to learn more about it and keep improving my skills. In the future, I
+        also want to learn how to make an app, one that has a real purpose and helps
+        people. I haven't decided what it will be yet, but I know I want to build
+        something useful.
+      </p>
+    </section>
+
+    <section id="schedule">
+      <h2>My Class Schedule</h2>
+
+      <div class="table-wrap">
+        <table>
+          <caption>My class schedule for the current semester</caption>
+          <thead>
+            <tr>
+              <th scope="col">Subject</th>
+              <th scope="col">Day</th>
+              <th scope="col">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CS 101: Introduction to Computing</td>
+              <td>Wednesday</td>
+              <td>9:00 AM - 12:00 PM</td>
+            </tr>
+            <tr>
+              <td>CS 102: Computer Programming</td>
+              <td>Monday, Wednesday</td>
+              <td>4:00 PM - 7:00 PM</td>
+            </tr>
+            <tr>
+              <td>Phys 1: Physics for Computing</td>
+              <td>Tuesday, Thursday</td>
+              <td>1:00 PM - 2:30 PM</td>
+            </tr>
+            <tr>
+              <td>Math 101: Mathematical Analysis</td>
+              <td>Tuesday, Thursday, Friday</td>
+              <td>2:30 PM - 4:00 PM, 1:00 PM - 3:00 PM</td>
+            </tr>
+            <tr>
+              <td>GEC 11: Understanding the Self</td>
+              <td>Friday</td>
+              <td>9:00 AM - 12:00 PM</td>
+            </tr>
+            <tr>
+              <td>PATHfit 1</td>
+              <td>Saturday</td>
+              <td>4:00 PM - 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>NSTP: ROTC</td>
+              <td>Sunday</td>
+              <td>7:00 AM - 12:00 PM</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- In this table, <tr> is one row, <th> is a header cell, and <td> is a data cell. -->
+    </section>
+
+    <section id="reflection">
+      <h2>Reflection</h2>
+
+      <blockquote class="reflection">
+        <p>
+          Making this page was harder than I expected. Improving the CSS took the most
+          time, and deciding what to write about myself was even harder because I
+          wasn't sure what to share. As I kept writing, it got easier, although it was
+          very draining. Writing everything out also taught me something about myself:
+          my hobbies may not be fun for everyone, but that's okay, because I enjoy them
+          in my own way, and I can still have fun with anyone and adjust to any
+          environment, even if it takes me some time. I'm just someone who likes having
+          fun and keeping negativity and stress out of my life.
+        </p>
+        <p>
+          Compared to my About Me activity, this version feels more "Me." The added
+          sections about my path into computing and my goals bring out more of myself, 
+          so people can get to know me better.
+        </p>
+      </blockquote>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by Razzel Atuli for CS 101, Bicol University.</p>
+  </footer>
+
+</body>
+</html>

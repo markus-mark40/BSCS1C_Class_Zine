@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@font-face {
+    font-family: "Limelight";
+    src: url("Fonts/Limelight-Regular.ttf") format("woff"),
+         url("Fonts/PlayfairDisplay-VariableFont_wght.ttf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Playfair Display, serif;
+    color: #777;
+}
+
+.nav ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3)
+}
+
+.main-nav li {
+    padding: 0 5%;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, .3)
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    background-color: rgba(4, 0, 6, 0.6);
+    background-image: url("Images/Untitled54.jpg.webp");
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 150px;
+}
+
+.name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "Limelight";
+    font-weight: normal;
+    color: white;
+}
+
+.name-large {
+    font-size: 8em;
+}
+
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+.section-header {
+    font-family: "Limelight";
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.about-image {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+.main-footer {
+    background-color: #0c0110;
+    color: white;
+    padding: .25em 0;
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    width: 30px;
+    height: 30px;
+}
+
+/* ---------------------------------------------------------------
+- a color scheme inspired by space and my artwork.
+   --------------------------------------------------------------- */
+
+/* =========================================
+   SMOOTH & BEAUTIFUL WEBSITE ENHANCEMENTS
+   ========================================= */
+
+/* Smooth scrolling when clicking navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation hover transition */
+.main-nav a {
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #e7c6ff;
+    background-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-3px);
+}
+
+/* Animated underline for navigation */
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 0;
+    height: 2px;
+    background: #c084fc;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 70%;
+    left: 15%;
+}
+
+/* Welcome title entrance animation */
+.name-large {
+    animation: welcomeFade 1.2s ease-out both;
+    text-shadow: 0 0 18px rgba(192, 132, 252, 0.35);
+}
+
+@keyframes welcomeFade {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section headings */
+.section-header {
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.section-header:hover {
+    color: #8b5cf6;
+    letter-spacing: 2px;
+}
+
+/* Profile picture */
+.about-image {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 8px 25px rgba(30, 10, 50, 0.18);
+}
+
+.about-image:hover {
+    transform: scale(1.06) rotate(2deg);
+    box-shadow: 0 12px 35px rgba(139, 92, 246, 0.35);
+}
+
+/* Paragraph readability and subtle interaction */
+.content-section p {
+    line-height: 1.8;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+thead {
+    background: #241333;
+}
+
+thead th {
+    color: #fff;
+}
+
+tbody tr {
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+tbody tr:hover {
+    background-color: rgba(192, 132, 252, 0.12);
+}
+
+/* Footer social icons */
+.footer-nav img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-nav img:hover {
+    transform: translateY(-5px) scale(1.12);
+    filter: drop-shadow(0 0 6px #c084fc);
+}
+
+/* Respect visitors who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.name.name-large {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.name.name-large:hover {
+    color: #d8b4ff;
+    text-shadow: 0 0 15px #b56aff;
+}
+
+
+/* mobile */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+@media screen and (max-width: 768px) {
+
+    /* Navigation */
+    .main-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        gap: 10px;
+    }
+    /* Welcome heading */
+    .name-large {
+        font-size: clamp(2.5rem, 12vw, 5rem);
+    }
+    /* Content sections */
+    .content-section {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    /* About image */
+    .about-image {
+        float: none;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    /* Schedule table */
+    table {
+        width: 100%;
+        max-width: 100%;
+        table-layout: fixed;
+    }
+    td, th {
+        overflow-wrap: anywhere;
+        word-wrap: break-word;
+    }
+    /* Prevent oversized text */
+    h1, h2, h3, p {
+        overflow-wrap: break-word;
+    }
+}
+
+
+/* =========================================
+   MUSIC PLAYER
+========================================= */
+
+.music-player {
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 30px;
+    background-color: #0c0110;
+    color: white;
+    font-family: "Limelight", cursive;
+}
+
+.music-player p {
+    font-family: "Limelight", cursive;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.music-player audio {
+    width: 280px;
+    max-width: 100%;
+}
+
+.main-footer-container a {
+    font-family: "Limelight", cursive;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.main-footer-container a:hover {
+    color: #d8b4ff;
+    text-shadow: 0 0 10px #b56aff;
+}

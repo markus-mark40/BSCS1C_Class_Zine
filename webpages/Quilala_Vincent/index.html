@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vincent C. Quilala, a first-year BSCS student at Bicol University - CS101 Class About Me Zine.">
+  <title>Vincent C. Quilala | Class About Me Zine</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER: title, introduction, navigation, Back to Home ===== -->
+  <header class="hero">
+    <p class="status"><span class="dot"></span> System online &bull; CS101 Class Zine</p>
+    <h1><span class="h1-pre">Welcome to</span><span class="h1-main">Vincent's Webpage</span></h1>
+    <p class="tagline">1st Year BSCS &bull; Bicol University</p>
+
+    <!-- Short introduction (two sentences) -->
+    <p class="intro">
+      Step into my digital space, where a curious first-year Computer Science student shares his
+      passions, his path, and the <strong>code-filled future</strong> he is building. Scroll down
+      and get to know the person behind the screen.
+    </p>
+
+    <!-- Navigation: in-page table of contents plus the required Back to Home link -->
+    <nav aria-label="Page sections">
+      <ul>
+        <li><a href="#hello">Hello</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#path">My path</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#ask">Ask me</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+        <li><a class="home-link" href="../../index.html">Back to Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- ------- HELLO: profile photo + greeting (Grid layout) ------- -->
+    <section id="hello" class="panel hello-grid">
+      <!-- COMMENT: The <img> tag shows my photo. The src attribute tells the browser where the picture file is (images/profile.jpg), and the alt attribute describes the photo for screen readers or if the image does not load. -->
+      <figure class="portrait">
+        <img src="images/profile.jpg" width="900" height="604"
+             alt="Profile picture">
+        <figcaption>Me at a cafe with my favorite matcha drink.</figcaption>
+      </figure>
+
+      <div>
+        <h2>Hello</h2>
+        <p>
+          Hello! I'm <strong>Vincent</strong>, a first-year BSCS student who is easygoing, open to
+          learning, and determined to become a better version of myself while working hard to
+          achieve success in life.
+        </p>
+        <!-- Quick facts as cards -->
+        <ul class="chips">
+          <li><b>Preferred name</b> Vincent</li>
+          <li><b>Program</b> BSCS</li>
+          <li><b>Year level</b> 1st year</li>
+          <li><b>School</b> Bicol University</li>
+        </ul>
+        <blockquote>
+          Determined to become a better version of myself.
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ------- ABOUT ME: interests, hobbies, free time ------- -->
+    <section id="about" class="panel">
+      <h2>About me</h2>
+      <p>
+        Hello! My name is <strong>Vincent C. Quilala</strong>, a first-year BSCS student at
+        Bicol University. I enjoy watching K-dramas and anime, listening to music, and hanging
+        out with friends. I chose Computer Science because I dream of becoming a
+        <em>software engineer</em> someday. I hope to learn different programming languages,
+        improve my coding skills, and gain the knowledge needed to develop useful applications.
+        I am willing to learn from challenges and mistakes as I work toward achieving my goals.
+      </p>
+      <p>
+        I'm interested in programming and technology. During my free time, I enjoy watching anime
+        and K-dramas, listening to music, hanging out with friends, working out, playing online
+        games, and participating in sports. I enjoy trying different activities and making the
+        most of my free time.
+      </p>
+
+      <h3>My hobbies</h3>
+      <ul class="cards">
+        <li><span class="icon">&#127918;</span> Playing online games</li>
+        <li><span class="icon">&#9917;</span> Playing sports</li>
+        <li><span class="icon">&#127947;</span> Working out</li>
+        <li><span class="icon">&#127916;</span> Watching anime &amp; K-dramas</li>
+        <li><span class="icon">&#127911;</span> Listening to music</li>
+        <li><span class="icon">&#129309;</span> Hanging out with friends</li>
+      </ul>
+
+      <!-- Caption  -->
+
+      <figure class="photo">
+        <img src="images/picture2.jpg" width="1600" height="1200" loading="lazy"
+             alt="Highland picture>
+        <figcaption>
+          #BurningMemories<br>
+          <span>Credit: Ray Lauro</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ------- MY PATH INTO COMPUTING ------- -->
+    <section id="path" class="panel">
+      <h2>My path into computing</h2>
+      <p>
+        I chose Computer Science because I want to become a software engineer someday. I'm
+        fascinated by how technology works and how programming can be used to create useful
+        applications and solve real-world problems. I believe studying Computer Science will
+        help me develop the knowledge and skills I need to achieve my dream career.
+      </p>
+
+      <h3>My class schedule</h3>
+
+      
+        <table>
+          <caption>My weekly class schedule, Monday to Sunday</caption>
+          <thead>
+            <tr>
+              <th scope="col">Subject</th>
+              <th scope="col">Day</th>
+              <th scope="col">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CS 102 Computer Programming</td>
+              <td>Monday</td>
+              <td>4:00 PM &ndash; 7:00 PM</td>
+            </tr>
+            <tr>
+              <td>Physics for Computing</td>
+              <td>Tuesday</td>
+              <td>1:00 PM &ndash; 2:30 PM</td>
+            </tr>
+            <tr>
+              <td>Mathematical Analysis</td>
+              <td>Tuesday</td>
+              <td>2:30 PM &ndash; 4:00 PM</td>
+            </tr>
+            <tr>
+              <td>CS 101 Introduction to Computing</td>
+              <td>Wednesday</td>
+              <td>9:00 AM &ndash; 12:00 PM</td>
+            </tr>
+            <tr>
+              <td>CS 102 Computer Programming</td>
+              <td>Wednesday</td>
+              <td>4:00 PM &ndash; 7:00 PM</td>
+            </tr>
+            <tr>
+              <td>Physics for Computing</td>
+              <td>Thursday</td>
+              <td>1:00 PM &ndash; 2:30 PM</td>
+            </tr>
+            <tr>
+              <td>Mathematical Analysis</td>
+              <td>Thursday</td>
+              <td>2:30 PM &ndash; 4:00 PM</td>
+            </tr>
+            <tr>
+              <td>Understanding the Self</td>
+              <td>Friday</td>
+              <td>9:00 AM &ndash; 12:00 PM</td>
+            </tr>
+            <tr>
+              <td>Mathematical Analysis</td>
+              <td>Friday</td>
+              <td>1:00 PM &ndash; 3:00 PM</td>
+            </tr>
+            <tr>
+              <td>Movement Competency Training</td>
+              <td>Saturday</td>
+              <td>4:00 PM &ndash; 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>ROTC</td>
+              <td>Sunday</td>
+              <td>7:00 AM &ndash; 12:00 PM</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ------- FAVORITES OR SKILLS: list, table and link ------- -->
+    <section id="skills" class="panel">
+      <h2>Favorites or skills</h2>
+      <p>
+        One of the main skills I want to develop is becoming a good programmer. I want to improve
+        my abilities in:
+      </p>
+
+      <!-- List of skills -->
+      <ul class="skill-list">
+        <li>Writing clean and organized code.</li>
+        <li>Understanding different programming languages.</li>
+        <li>Solving problems using programming.</li>
+        <li>Finding and fixing errors in code.</li>
+        <li>Developing useful software and applications.</li>
+      </ul>
+
+      <h3>Skill tree</h3>
+      <div class="table-wrap">
+        <table>
+          <caption>The skills I am building as a future programmer</caption>
+          <thead>
+            <tr>
+              <th scope="col">Skill</th>
+              <th scope="col">What it means for me</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Clean code</td><td>Code that is organized and easy for others to read</td></tr>
+            <tr><td>Languages</td><td>Understanding how different programming languages work</td></tr>
+            <tr><td>Problem solving</td><td>Using programming to solve real problems</td></tr>
+            <tr><td>Debugging</td><td>Finding and fixing errors in code</td></tr>
+            <tr><td>Software development</td><td>Building useful software and applications</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Link (from the activity): my favorite website -->
+      <aside class="fav-site">
+        <h3>My favorite website</h3>
+        <p>
+          One website I enjoy visiting is
+          <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+          because it allows me to stay connected with my family and friends, keep up with the
+          latest news and trends, and discover interesting posts, videos, and other content.
+          It is also a great way to communicate with other people, share my experiences, and
+          stay updated on what is happening around me.
+        </p>
+        
+      </aside>
+    </section>
+
+    <!-- ------- GOALS ------- -->
+    <section id="goals" class="panel">
+      <h2>Goals</h2>
+      <p>
+        My goal is to become a successful software engineer in the future. Over the next few years,
+        I hope to learn different programming languages, improve my problem-solving skills, gain
+        more experience in software development, and work on projects that will help me grow as a
+        future programmer. I also want to continue improving myself both personally and
+        academically.
+      </p>
+
+      <div class="two-col">
+        <article class="mission">
+          <h3>My top 3 goals</h3>
+          <ol>
+            <li>To be the best version of myself</li>
+            <li>To have a good physique</li>
+            <li>To be successful</li>
+          </ol>
+        </article>
+        <article class="mission">
+          <h3>Next few years</h3>
+          <ul>
+            <li>Learn different programming languages</li>
+            <li>Improve my problem-solving skills</li>
+            <li>Gain experience in software development</li>
+            <li>Work on projects that help me grow</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ------- ASK ME ABOUT (details/summary, CSS-only accordion) ------- -->
+    <section id="ask" class="panel">
+      <h2>Ask me about</h2>
+      <p>Tap a topic to open it. I'm always happy to chat about these!</p>
+      <details>
+        <summary>Anime &amp; K-dramas</summary>
+        <p>I love watching them in my free time. Feel free to share your recommendations with me.</p>
+      </details>
+      <details>
+        <summary>Working out &amp; sports</summary>
+        <p>Staying active is part of how I try to become the best version of myself.</p>
+      </details>
+      <details>
+        <summary>Online games</summary>
+        <p>Playing online games is one of my favorite ways to relax and have fun with friends.</p>
+      </details>
+      <details>
+        <summary>Programming &amp; technology</summary>
+        <p>I'm fascinated by how technology works and how code can solve real-world problems.</p>
+      </details>
+    </section>
+
+    <!-- ------- REFLECTION ------- -->
+    <section id="reflection" class="panel">
+      <h2>Reflection</h2>
+      <p>
+        Creating this webpage helped me understand more about myself, my interests, and my goals as a
+        Computer Science student. I also learned that designing a webpage requires proper
+        organization, creativity, and attention to detail. Compared to my previous About Me
+        activity, I improved how I express myself and organize my information. This activity also
+        motivated me to learn more about web design and programming because they are important
+        skills for my future career.
+      </p>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>Made by <strong>Vincent C. Quilala</strong> for CS 101, Bicol University.</p>
+    <p><a href="../../index.html">Back to Home</a> &bull; <a href="#hello">Back to top</a></p>
+  </footer>
+
+</body>
+</html>
